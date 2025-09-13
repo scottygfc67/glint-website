@@ -55,7 +55,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </div>
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Transform Your
-            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block" style={{color: '#C19477'}}>
               Under-Eye Area
             </span>
           </h2>
@@ -163,13 +163,15 @@ export default function ProductCard({ product }: ProductCardProps) {
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="/api/checkout?qty=1" 
-                className="flex-1 bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors text-center"
+                className="flex-1 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center"
+                style={{background: 'linear-gradient(to right, #C19477, #B8865B)'}}
               >
                 Add to Cart
               </a>
               <a 
                 href="/api/checkout?qty=1" 
-                className="flex-1 border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-all text-center"
+                className="flex-1 border-2 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-center"
+                style={{borderColor: '#C19477', color: '#C19477'}}
               >
                 Buy Now
               </a>

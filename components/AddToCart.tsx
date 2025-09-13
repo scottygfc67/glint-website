@@ -76,14 +76,16 @@ export default function AddToCart({ variantGid, title, price, currencyCode, imag
           className={`flex-1 px-8 py-4 rounded-lg font-semibold text-lg transition-colors ${
             added 
               ? "bg-green-600 text-white" 
-              : "bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-60 disabled:cursor-not-allowed"
+              : "text-white disabled:opacity-60 disabled:cursor-not-allowed"
           }`}
+          style={!added ? {background: 'linear-gradient(to right, #C19477, #B8865B)'} : {}}
         >
           {loading ? "Adding to Cart..." : added ? "✓ Added to Cart!" : "Add to Cart"}
         </button>
         <a
           href={`/api/checkout?qty=${qty}`}
-          className="flex-1 border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-all text-center"
+          className="flex-1 border-2 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-center"
+          style={{borderColor: '#C19477', color: '#C19477'}}
         >
           Buy Now
         </a>

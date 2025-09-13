@@ -95,7 +95,8 @@ export default function GlassNav() {
             </Link>
             <Link
               href="/api/checkout?qty=1"
-              className="bg-white/20 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-white/30 transition-colors backdrop-blur-sm"
+              className="text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors backdrop-blur-sm"
+              style={{background: 'linear-gradient(to right, #C19477, #B8865B)'}}
             >
               Buy Now
             </Link>
@@ -162,7 +163,8 @@ export default function GlassNav() {
               </Link>
               <Link
                 href="/api/checkout?qty=1"
-                className="block px-3 py-2 text-base font-medium bg-white/20 text-white rounded-lg mx-3 text-center hover:bg-white/30"
+                className="block px-3 py-2 text-base font-medium text-white rounded-lg mx-3 text-center"
+                style={{background: 'linear-gradient(to right, #C19477, #B8865B)'}}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Buy Now

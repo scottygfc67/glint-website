@@ -62,7 +62,10 @@ export default function Footer() {
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-2 bg-gray-800 text-white rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
-              <button className="px-4 py-2 bg-blue-600 text-white rounded-r-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <button 
+                className="px-4 py-2 text-white rounded-r-lg focus:outline-none focus:ring-2 transition-colors"
+                style={{background: 'linear-gradient(to right, #C19477, #B8865B)', focusRingColor: '#C19477'}}
+              >
                 Subscribe
               </button>
             </div>
