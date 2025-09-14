@@ -1,6 +1,6 @@
 import "./globals.css";
-import GlassNav from "@/components/GlassNav";
 import { CartProvider } from "@/contexts/CartContext";
+import ConditionalNav from "@/components/ConditionalNav";
 
 export const metadata = {
   title: "GLINT – Eye Glow Serum",
@@ -12,8 +12,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="bg-white text-gray-900 antialiased">
         <CartProvider>
-          <GlassNav />
-          <main className="pt-16">{children}</main>
+          <ConditionalNav />
+          <main>{children}</main>
         </CartProvider>
       </body>
     </html>

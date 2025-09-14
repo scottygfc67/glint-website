@@ -64,7 +64,7 @@ export default function Footer() {
               />
               <button 
                 className="px-4 py-2 text-white rounded-r-lg focus:outline-none focus:ring-2 transition-colors"
-                style={{background: 'linear-gradient(to right, #C19477, #B8865B)', focusRingColor: '#C19477'}}
+                style={{background: 'linear-gradient(to right, #C19477, #B8865B)'}}
               >
                 Subscribe
               </button>

@@ -57,8 +57,8 @@ export default async function Page() {
 
   return (
     <>
-      <Hero product={product} />
-      <ProductCard product={product} />
+      <Hero product={product || undefined} />
+      <ProductCard product={product || undefined} />
       <FeaturesSection />
       <TestimonialsSection />
       <Footer />

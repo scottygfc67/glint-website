@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   const envVars = {
     SHOPIFY_PRODUCT_ID: process.env.SHOPIFY_PRODUCT_ID,
     SHOPIFY_VARIANT_ID: process.env.SHOPIFY_VARIANT_ID,

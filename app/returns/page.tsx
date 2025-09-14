@@ -67,7 +67,7 @@ export default function ReturnsPage() {
                     <span className="text-2xl font-bold text-blue-600">2</span>
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">Get Return Label</h3>
-                  <p className="text-gray-600 text-sm">We'll send you a prepaid return label</p>
+                  <p className="text-gray-600 text-sm">We&apos;ll send you a prepaid return label</p>
                 </div>
                 <div className="text-center">
                   <div className="bg-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-sm">
@@ -93,7 +93,7 @@ export default function ReturnsPage() {
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-4 text-red-600">✗ What We Don't Accept</h3>
+                  <h3 className="font-semibold text-gray-900 mb-4 text-red-600">✗ What We Don&apos;t Accept</h3>
                   <ul className="space-y-2 text-gray-600">
                     <li>• Used or opened products</li>
                     <li>• Items past the 30-day window</li>
@@ -141,7 +141,7 @@ export default function ReturnsPage() {
             {/* Contact */}
             <div className="bg-blue-50 rounded-2xl p-8 text-center">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Need Help?</h2>
-              <p className="text-gray-700 mb-6">Have questions about returns? We're here to help!</p>
+              <p className="text-gray-700 mb-6">Have questions about returns? We&apos;re here to help!</p>
               <a 
                 href="/contact" 
                 className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"

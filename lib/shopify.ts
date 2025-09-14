@@ -2,7 +2,7 @@ export const SHOPIFY_DOMAIN = process.env.NEXT_PUBLIC_SHOPIFY_DOMAIN!;
 const STOREFRONT_TOKEN = process.env.SHOPIFY_PUBLIC_ACCESS_TOKEN || process.env.SHOPIFY_PRIVATE_ACESS_TOKEN!;
 export const API_URL = `https://${SHOPIFY_DOMAIN}/api/2024-07/graphql.json`;
 
-export async function shopify<T>(query: string, vars?: Record<string, any>) {
+export async function shopify<T>(query: string, vars?: Record<string, unknown>) {
   const res = await fetch(API_URL, {
     method: "POST",
     headers: {

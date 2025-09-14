@@ -109,8 +109,8 @@ export default function ShippingPage() {
             <div className="bg-gray-50 rounded-2xl p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Track Your Order</h2>
               <p className="text-gray-700 mb-4">
-                Once your order is dispatched, you'll receive a tracking number via email. 
-                You can track your package using Royal Mail's tracking service.
+                Once your order is dispatched, you&apos;ll receive a tracking number via email. 
+                You can track your package using Royal Mail&apos;s tracking service.
               </p>
               <a 
                 href="https://www.royalmail.com/track-your-item" 

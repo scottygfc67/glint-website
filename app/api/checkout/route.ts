@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
     }
     
     // Create cart URL with multiple items
-    const cartItems = items.map((item: any) => `${item.variantId}:${item.quantity}`).join(',');
+    const cartItems = items.map((item: { variantId: string; quantity: number }) => `${item.variantId}:${item.quantity}`).join(',');
     const checkoutUrl = `https://${domain}/cart/${cartItems}`;
     
     console.log('Redirecting to Shopify checkout with items:', checkoutUrl);

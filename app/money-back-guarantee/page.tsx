@@ -7,7 +7,7 @@ export default function MoneyBackGuaranteePage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
           <div className="text-center mb-12">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">30-Day Money-Back Guarantee</h1>
-            <p className="text-xl text-gray-600">We're so confident you'll love GLINT, we guarantee it!</p>
+            <p className="text-xl text-gray-600">We&apos;re so confident you&apos;ll love GLINT, we guarantee it!</p>
           </div>
 
           <div className="space-y-8">
@@ -20,8 +20,8 @@ export default function MoneyBackGuaranteePage() {
               </div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">100% Money-Back Guarantee</h2>
               <p className="text-lg text-gray-700 mb-6">
-                Try GLINT risk-free for 30 days. If you're not completely satisfied, 
-                we'll refund every penny - no questions asked.
+                Try GLINT risk-free for 30 days. If you&apos;re not completely satisfied, 
+                we&apos;ll refund every penny - no questions asked.
               </p>
               <div className="bg-white rounded-xl p-6 max-w-2xl mx-auto">
                 <p className="text-2xl font-bold text-blue-600 mb-2">30 Days</p>
@@ -86,7 +86,7 @@ export default function MoneyBackGuaranteePage() {
 
             {/* What We're Looking For */}
             <div className="bg-gray-50 rounded-2xl p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">What We're Looking For</h2>
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">What We&apos;re Looking For</h2>
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-4 text-green-600">✓ Positive Results</h3>

@@ -43,7 +43,7 @@ export default function TestimonialsSection() {
                   </svg>
                 ))}
               </div>
-              <p className="text-gray-600 mb-6 italic">"{testimonial.content}"</p>
+              <p className="text-gray-600 mb-6 italic">&ldquo;{testimonial.content}&rdquo;</p>
               <div className="flex items-center">
                 <img 
                   src={testimonial.image} 

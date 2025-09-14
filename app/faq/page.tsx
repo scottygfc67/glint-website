@@ -136,7 +136,7 @@ export default function FAQPage() {
             {/* Still Have Questions */}
             <div className="bg-blue-50 rounded-2xl p-8 text-center">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Still Have Questions?</h2>
-              <p className="text-gray-700 mb-6">Can't find what you're looking for? Our customer support team is here to help!</p>
+              <p className="text-gray-700 mb-6">Can&apos;t find what you&apos;re looking for? Our customer support team is here to help!</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="/contact" 
