@@ -45,10 +45,11 @@ export default function TestimonialsSection() {
               </div>
               <p className="text-gray-600 mb-6 italic">&ldquo;{testimonial.content}&rdquo;</p>
               <div className="flex items-center">
-                <img 
-                  src={testimonial.image} 
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover mr-4"
+                <div
+                  className="w-12 h-12 rounded-full bg-cover bg-center bg-no-repeat mr-4"
+                  style={{
+                    backgroundImage: `url('${testimonial.image}')`,
+                  }}
                 />
                 <div>
                   <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>

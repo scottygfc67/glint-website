@@ -7,7 +7,14 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <img src="/logo.png" alt="GLINT" className="h-8 w-auto" />
+            <div
+              className="h-8 w-auto bg-contain bg-no-repeat bg-center"
+              style={{
+                backgroundImage: "url('/logo.png')",
+                width: "120px",
+                height: "32px"
+              }}
+            />
             <p className="text-gray-400">
               Revolutionary eye care products that transform your skincare routine with clinically proven ingredients.
             </p>

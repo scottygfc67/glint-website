@@ -1,5 +1,6 @@
 import "./globals.css";
 import { CartProvider } from "@/contexts/CartContext";
+import AnnouncementBar from "@/components/AnnouncementBar";
 import ConditionalNav from "@/components/ConditionalNav";
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="bg-white text-gray-900 antialiased">
         <CartProvider>
+          <AnnouncementBar />
           <ConditionalNav />
           <main>{children}</main>
         </CartProvider>

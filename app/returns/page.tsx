@@ -1,14 +1,17 @@
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 export default function ReturnsPage() {
   return (
     <>
-      <div className="bg-white min-h-screen pt-20">
+      <PageHero 
+        title="Returns & Exchanges"
+        subtitle="30-day hassle-free returns"
+        description="We make returns simple and stress-free. Return any unused product within 30 days for a full refund."
+      />
+      
+      <div className="bg-white min-h-screen">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Returns & Exchanges</h1>
-            <p className="text-xl text-gray-600">30-day hassle-free returns</p>
-          </div>
 
           <div className="space-y-8">
             {/* Return Policy */}

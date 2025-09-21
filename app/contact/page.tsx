@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -35,12 +36,14 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className="bg-white min-h-screen pt-20">
+      <PageHero 
+        title="Contact Us"
+        subtitle="We'd love to hear from you. Send us a message!"
+        description="Have questions about our products or need support? Get in touch with our friendly team."
+      />
+      
+      <div className="bg-white min-h-screen">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
-            <p className="text-xl text-gray-600">We&apos;d love to hear from you. Send us a message!</p>
-          </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}

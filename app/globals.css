@@ -1,18 +1,41 @@
 @import "tailwindcss";
 
-:root {
-  --background: #0c0f16;
-  --foreground: #ffffff;
+:root{
+  --bg:#FFFFFF; 
+  --surface:#F7F9FC; 
+  --ink:#0F1115; 
+  --muted:#5B636D;
+  --hairline:#E9EEF5; 
+  --chrome:#C9D3DA;
+
+  /* Pearl gradient + soft versions */
+  --pearl1:#DCE8FF; 
+  --pearl2:#EEDCFF; 
+  --pearl3:#D8FFF2; 
+  --pearl4:#FDE3FF;
+  --pearl-veil: linear-gradient(90deg,var(--pearl1),var(--pearl2),var(--pearl3),var(--pearl4));
+  --pearl-soft: linear-gradient(90deg,
+      color-mix(in_oklab,var(--pearl1) 10%, transparent),
+      color-mix(in_oklab,var(--pearl2) 10%, transparent),
+      color-mix(in_oklab,var(--pearl3) 10%, transparent),
+      color-mix(in_oklab,var(--pearl4) 10%, transparent));
+
+  --shadow-card: 0 6px 24px rgba(15,17,21,.06);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-hairline: var(--hairline);
+  --color-chrome: var(--chrome);
 }
 
 body {
-  background: linear-gradient(135deg, #0c0f16 0%, #121827 50%, #1d2435 100%);
-  color: var(--foreground);
+  background: var(--bg);
+  color: var(--ink);
   font-family: system-ui, -apple-system, sans-serif;
   min-height: 100vh;
 }

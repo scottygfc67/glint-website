@@ -1,14 +1,17 @@
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 export default function MoneyBackGuaranteePage() {
   return (
     <>
-      <div className="bg-white min-h-screen pt-20">
+      <PageHero 
+        title="30-Day Money-Back Guarantee"
+        subtitle="We're so confident you'll love GLINT, we guarantee it!"
+        description="Try GLINT risk-free for 30 days. If you're not completely satisfied, we'll refund every penny - no questions asked."
+      />
+      
+      <div className="bg-white min-h-screen">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">30-Day Money-Back Guarantee</h1>
-            <p className="text-xl text-gray-600">We&apos;re so confident you&apos;ll love GLINT, we guarantee it!</p>
-          </div>
 
           <div className="space-y-8">
             {/* Guarantee Overview */}

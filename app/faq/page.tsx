@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 export default function FAQPage() {
   const faqs = [
@@ -111,12 +112,14 @@ export default function FAQPage() {
 
   return (
     <>
-      <div className="bg-white min-h-screen pt-20">
+      <PageHero 
+        title="Frequently Asked Questions"
+        subtitle="Everything you need to know about GLINT"
+        description="Find answers to common questions about our products, shipping, returns, and more."
+      />
+      
+      <div className="bg-white min-h-screen">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h1>
-            <p className="text-xl text-gray-600">Everything you need to know about GLINT</p>
-          </div>
 
           <div className="space-y-12">
             {faqs.map((category, categoryIndex) => (

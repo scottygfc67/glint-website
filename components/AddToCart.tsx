@@ -9,10 +9,10 @@ interface AddToCartProps {
   price: number;
   currencyCode: string;
   image?: string;
+  quantity?: number;
 }
 
-export default function AddToCart({ variantGid, title, price, currencyCode, image }: AddToCartProps) {
-  const [qty, setQty] = useState(1);
+export default function AddToCart({ variantGid, title, price, currencyCode, image, quantity = 1 }: AddToCartProps) {
   const [loading, setLoading] = useState(false);
   const [added, setAdded] = useState(false);
   const { addItem } = useCart();
@@ -26,7 +26,7 @@ export default function AddToCart({ variantGid, title, price, currencyCode, imag
         price,
         currencyCode,
         image,
-        quantity: qty,
+        quantity: quantity,
       });
       setAdded(true);
       setTimeout(() => setAdded(false), 2000);
@@ -37,55 +37,22 @@ export default function AddToCart({ variantGid, title, price, currencyCode, imag
 
   return (
     <div className="space-y-4">
-      {/* Quantity Selector */}
-      <div className="flex items-center space-x-4">
-        <label className="text-sm font-medium text-gray-700">Quantity:</label>
-        <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
-          <button
-            type="button"
-            onClick={() => {
-              console.log('Decrease clicked, current qty:', qty);
-              setQty(Math.max(1, qty - 1));
-            }}
-            className="px-3 py-2 text-gray-600 hover:text-gray-800 hover:bg-gray-50 transition-colors cursor-pointer select-none disabled:opacity-50 disabled:cursor-not-allowed"
-            disabled={qty <= 1}
-          >
-            −
-          </button>
-          <div className="w-16 text-center py-2 bg-gray-50 border-x border-gray-300">
-            <span className="text-gray-900 font-medium">{qty}</span>
-          </div>
-          <button
-            type="button"
-            onClick={() => {
-              console.log('Increase clicked, current qty:', qty);
-              setQty(qty + 1);
-            }}
-            className="px-3 py-2 text-gray-600 hover:text-gray-800 hover:bg-gray-50 transition-colors cursor-pointer select-none"
-          >
-            +
-          </button>
-        </div>
-      </div>
-
       {/* Action Buttons */}
       <div className="flex flex-col sm:flex-row gap-4">
         <button
           onClick={addToCart}
           disabled={loading}
           className={`flex-1 px-8 py-4 rounded-lg font-semibold text-lg transition-colors ${
-            added 
-              ? "bg-green-600 text-white" 
-              : "text-white disabled:opacity-60 disabled:cursor-not-allowed"
+            added
+              ? "bg-green-600 text-white"
+              : "bg-black text-white hover:bg-gray-800 disabled:opacity-60 disabled:cursor-not-allowed"
           }`}
-          style={!added ? {background: 'linear-gradient(to right, #C19477, #B8865B)'} : {}}
         >
           {loading ? "Adding to Cart..." : added ? "✓ Added to Cart!" : "Add to Cart"}
         </button>
         <a
-          href={`/api/checkout?qty=${qty}`}
-          className="flex-1 border-2 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-center"
-          style={{borderColor: '#C19477', color: '#C19477'}}
+          href={`/api/checkout?qty=${quantity}`}
+          className="flex-1 border-2 border-black text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all text-center hover:bg-black hover:text-white"
         >
           Buy Now
         </a>

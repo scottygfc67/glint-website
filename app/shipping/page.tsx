@@ -1,14 +1,17 @@
 import Footer from "@/components/Footer";
+import PageHero from "@/components/PageHero";
 
 export default function ShippingPage() {
   return (
     <>
-      <div className="bg-white min-h-screen pt-20">
+      <PageHero 
+        title="Shipping Information"
+        subtitle="Fast, secure delivery with Royal Mail"
+        description="We offer fast and reliable shipping across the UK with Royal Mail. Free shipping on orders over £50."
+      />
+      
+      <div className="bg-white min-h-screen">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Shipping Information</h1>
-            <p className="text-xl text-gray-600">Fast, secure delivery with Royal Mail</p>
-          </div>
 
           <div className="space-y-8">
             {/* Shipping Methods */}
