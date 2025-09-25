@@ -1,5 +1,6 @@
 import "./globals.css";
 import { CartProvider } from "@/contexts/CartContext";
+import { LocationProvider } from "@/contexts/LocationContext";
 import AnnouncementBar from "@/components/AnnouncementBar";
 import ConditionalNav from "@/components/ConditionalNav";
 
@@ -12,11 +13,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="bg-white text-gray-900 antialiased">
-        <CartProvider>
-          <AnnouncementBar />
-          <ConditionalNav />
-          <main>{children}</main>
-        </CartProvider>
+        <LocationProvider>
+          <CartProvider>
+            <AnnouncementBar />
+            <ConditionalNav />
+            <main>{children}</main>
+          </CartProvider>
+        </LocationProvider>
       </body>
     </html>
   );

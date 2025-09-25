@@ -33,6 +33,8 @@ export async function POST(req: NextRequest) {
   try {
     const { items } = await req.json();
     
+    console.log('Checkout API received items:', items);
+    
     if (!items || !Array.isArray(items) || items.length === 0) {
       return NextResponse.json({ error: 'No items provided' }, { status: 400 });
     }
@@ -47,8 +49,11 @@ export async function POST(req: NextRequest) {
     const cartItems = items.map((item: { variantId: string; quantity: number }) => `${item.variantId}:${item.quantity}`).join(',');
     const checkoutUrl = `https://${domain}/cart/${cartItems}`;
     
+    console.log('Cart items string:', cartItems);
     console.log('Redirecting to Shopify checkout with items:', checkoutUrl);
-    return NextResponse.redirect(checkoutUrl);
+    
+    // Return the URL instead of redirecting directly
+    return NextResponse.json({ url: checkoutUrl });
     
   } catch (error) {
     console.error('Checkout redirect failed:', error);

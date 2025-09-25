@@ -38,7 +38,7 @@ export default function PageHero({ title, subtitle, description }: PageHeroProps
             <a
               href="/api/checkout?qty=1"
               className="inline-flex items-center text-white px-8 py-4 rounded-full text-lg font-semibold transition-all hover:opacity-90 hover:scale-105 shadow-2xl"
-              style={{ backgroundColor: '#4A6B8A' }}
+              style={{ backgroundColor: '#1E3A8A' }}
             >
               Shop Now
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

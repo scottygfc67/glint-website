@@ -71,7 +71,7 @@ export default function Footer() {
               />
               <button 
                 className="px-4 py-2 text-white rounded-r-lg focus:outline-none focus:ring-2 transition-colors hover:opacity-90"
-                style={{backgroundColor: '#4A6B8A'}}
+                style={{backgroundColor: '#1E3A8A'}}
               >
                 Subscribe
               </button>

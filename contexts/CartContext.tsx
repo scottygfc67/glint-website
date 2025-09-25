@@ -95,7 +95,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
     
     // Special deal: 2 serums + free worldwide shipping for £29.99
     if (totalItems >= 2) {
-      return 29.99; // Fixed price for 2+ items
+      // Calculate how many complete sets of 2 we can make
+      const completeSets = Math.floor(totalItems / 2);
+      const remainingItems = totalItems % 2;
+      
+      // Each set of 2 costs £29.99, remaining single items cost £19.99 each
+      return (completeSets * 29.99) + (remainingItems * 19.99);
     }
     
     // Regular pricing for single items

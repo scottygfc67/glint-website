@@ -1,7 +1,20 @@
+"use client";
+
+import { useState } from "react";
 import Footer from "@/components/Footer";
 import PageHero from "@/components/PageHero";
 
 export default function FAQPage() {
+  const [openItems, setOpenItems] = useState<{ [key: string]: boolean }>({});
+
+  const toggleItem = (categoryIndex: number, questionIndex: number) => {
+    const key = `${categoryIndex}-${questionIndex}`;
+    setOpenItems(prev => ({
+      ...prev,
+      [key]: !prev[key]
+    }));
+  };
+
   const faqs = [
     {
       category: "Product & Usage",
@@ -121,29 +134,66 @@ export default function FAQPage() {
       <div className="bg-white min-h-screen">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
 
-          <div className="space-y-12">
+          <div className="space-y-8 lg:space-y-12">
             {faqs.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-gray-50 rounded-2xl p-8">
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">{category.category}</h2>
-                <div className="space-y-6">
-                  {category.questions.map((faq, faqIndex) => (
-                    <div key={faqIndex} className="bg-white rounded-xl p-6">
-                      <h3 className="text-lg font-semibold text-gray-900 mb-3">{faq.q}</h3>
-                      <p className="text-gray-600 leading-relaxed">{faq.a}</p>
-                    </div>
-                  ))}
+              <div key={categoryIndex} className="bg-white rounded-2xl p-4 lg:p-8 shadow-lg border border-gray-100">
+                <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-6" style={{ color: '#1E3A8A' }}>
+                  {category.category}
+                </h2>
+                <div className="space-y-4">
+                  {category.questions.map((faq, faqIndex) => {
+                    const isOpen = openItems[`${categoryIndex}-${faqIndex}`];
+                    return (
+                      <div key={faqIndex} className="border border-gray-200 rounded-xl overflow-hidden">
+                        <button
+                          onClick={() => toggleItem(categoryIndex, faqIndex)}
+                          className="w-full px-4 lg:px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
+                          style={{ focusRingColor: '#1E3A8A' }}
+                        >
+                          <div className="flex items-center justify-between">
+                            <h3 className="text-base lg:text-lg font-semibold text-gray-900 pr-4">
+                              {faq.q}
+                            </h3>
+                            <svg
+                              className={`w-5 h-5 text-gray-500 transition-transform duration-200 ${
+                                isOpen ? 'rotate-180' : ''
+                              }`}
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                            </svg>
+                          </div>
+                        </button>
+                        <div
+                          className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                            isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                          }`}
+                        >
+                          <div className="px-4 lg:px-6 pb-4">
+                            <p className="text-gray-600 leading-relaxed text-sm lg:text-base">
+                              {faq.a}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             ))}
 
             {/* Still Have Questions */}
-            <div className="bg-blue-50 rounded-2xl p-8 text-center">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Still Have Questions?</h2>
-              <p className="text-gray-700 mb-6">Can&apos;t find what you&apos;re looking for? Our customer support team is here to help!</p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="rounded-2xl p-6 lg:p-8 text-center shadow-lg border"
+                 style={{ backgroundColor: '#F8FBFF' }}>
+              <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">Still Have Questions?</h2>
+              <p className="text-gray-700 mb-6 text-sm lg:text-base">Can&apos;t find what you&apos;re looking for? Our customer support team is here to help!</p>
+              <div className="flex flex-col sm:flex-row gap-3 lg:gap-4 justify-center">
                 <a 
                   href="/contact" 
-                  className="inline-flex items-center bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  className="inline-flex items-center text-white px-6 lg:px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-colors"
+                  style={{ backgroundColor: '#1E3A8A' }}
                 >
                   Contact Support
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -152,7 +202,20 @@ export default function FAQPage() {
                 </a>
                 <a 
                   href="mailto:support@glint.com" 
-                  className="inline-flex items-center border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
+                  className="inline-flex items-center border-2 px-6 lg:px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-colors"
+                  style={{ 
+                    borderColor: '#B87333',
+                    color: '#B87333',
+                    backgroundColor: 'transparent'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = '#B87333';
+                    e.currentTarget.style.color = '#F8FBFF';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = 'transparent';
+                    e.currentTarget.style.color = '#B87333';
+                  }}
                 >
                   Email Us
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

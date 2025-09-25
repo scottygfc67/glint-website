@@ -1,11 +1,13 @@
 "use client";
 
 import { useCart } from "@/contexts/CartContext";
+import { useLocation } from "@/contexts/LocationContext";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 
 export default function CartPage() {
   const { items, removeItem, updateQuantity, getTotalPrice, getTotalItems, clearCart } = useCart();
+  const { location, convertPrice } = useLocation();
 
   if (items.length === 0) {
     return (
@@ -31,7 +33,7 @@ export default function CartPage() {
                 <Link 
                   href="/product"
                   className="inline-flex items-center text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-colors"
-                  style={{ backgroundColor: '#4A6B8A' }}
+                  style={{ backgroundColor: '#1E3A8A' }}
                 >
                   Continue Shopping
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -78,12 +80,12 @@ export default function CartPage() {
               </Link>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
+            <div className="grid lg:grid-cols-3 gap-4 lg:gap-8">
               {/* Cart Items */}
-              <div className="lg:col-span-2 space-y-6">
+              <div className="lg:col-span-2 space-y-4 lg:space-y-6">
                 {items.map((item) => (
-                  <div key={item.id} className="bg-white/95 backdrop-blur-sm rounded-2xl p-6 shadow-xl">
-                    <div className="flex items-center space-x-6">
+                  <div key={item.id} className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 lg:p-6 shadow-xl">
+                    <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6">
                       {/* Product Image */}
                       <div className="w-24 h-24 bg-gray-100 rounded-xl overflow-hidden flex-shrink-0">
                         <div
@@ -103,22 +105,19 @@ export default function CartPage() {
                       </div>
 
                       {/* Product Info */}
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
-                        <p className="text-gray-600 text-lg">
-                          {new Intl.NumberFormat("en", {
-                            style: "currency",
-                            currency: item.currencyCode,
-                          }).format(item.price)}
+                      <div className="flex-1 min-w-0 w-full sm:w-auto">
+                        <h3 className="text-lg lg:text-xl font-semibold text-gray-900 mb-2">{item.title}</h3>
+                        <p className="text-gray-600 text-base lg:text-lg">
+                          {location ? convertPrice(item.price) : `£${item.price.toFixed(2)}`}
                         </p>
                       </div>
 
                       {/* Quantity Controls */}
-                      <div className="flex items-center space-x-3">
+                      <div className="flex items-center justify-between w-full sm:w-auto space-x-3">
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
                           className="w-10 h-10 rounded-full border flex items-center justify-center hover:opacity-90 transition-colors"
-                          style={{ backgroundColor: '#4A6B8A', borderColor: '#4A6B8A' }}
+                          style={{ backgroundColor: '#1E3A8A', borderColor: '#1E3A8A' }}
                         >
                           <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
@@ -128,7 +127,7 @@ export default function CartPage() {
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
                           className="w-10 h-10 rounded-full border flex items-center justify-center hover:opacity-90 transition-colors"
-                          style={{ backgroundColor: '#4A6B8A', borderColor: '#4A6B8A' }}
+                          style={{ backgroundColor: '#1E3A8A', borderColor: '#1E3A8A' }}
                         >
                           <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -136,26 +135,23 @@ export default function CartPage() {
                         </button>
                       </div>
 
-                      {/* Item Total */}
-                      <div className="text-right">
-                        <p className="text-xl font-bold text-gray-900">
-                          {new Intl.NumberFormat("en", {
-                            style: "currency",
-                            currency: item.currencyCode,
-                          }).format(item.price * item.quantity)}
-                        </p>
-                      </div>
+                        {/* Item Total */}
+                        <div className="text-right sm:text-left">
+                          <p className="text-lg lg:text-xl font-bold text-gray-900">
+                            {location ? convertPrice(item.price * item.quantity) : `£${(item.price * item.quantity).toFixed(2)}`}
+                          </p>
+                        </div>
 
-                      {/* Remove Button */}
-                      <button
-                        onClick={() => removeItem(item.id)}
-                        className="text-gray-400 hover:text-red-600 transition-colors p-2"
-                        style={{ color: '#FF6B5B' }}
-                      >
-                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-                        </svg>
-                      </button>
+                        {/* Remove Button */}
+                        <button
+                          onClick={() => removeItem(item.id)}
+                          className="text-gray-400 hover:text-red-600 transition-colors p-2"
+                          style={{ color: '#B87333' }}
+                        >
+                          <svg className="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                          </svg>
+                        </button>
                     </div>
                   </div>
                 ))}
@@ -172,56 +168,47 @@ export default function CartPage() {
               </div>
 
               {/* Order Summary */}
-              <div className="lg:col-span-1">
-                <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-xl sticky top-8">
-                  <h2 className="text-2xl font-bold text-gray-900 mb-6">Order Summary</h2>
+              <div className="lg:col-span-1 order-first lg:order-last">
+                <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 lg:p-8 shadow-xl lg:sticky lg:top-8">
+                  <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 lg:mb-6">Order Summary</h2>
                   
                   <div className="space-y-4">
                     {getTotalItems() >= 2 ? (
                       <>
                         {/* Special Deal Display */}
-                        <div className="bg-gradient-to-r p-4 rounded-xl mb-4"
-                             style={{ backgroundColor: '#FF6B5B', color: '#F8FBFF' }}>
-                          <div className="flex items-center justify-between">
+                        <div className="bg-gradient-to-r p-3 lg:p-4 rounded-xl mb-4"
+                             style={{ backgroundColor: '#B87333', color: '#F8FBFF' }}>
+                          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-2 sm:space-y-0">
                             <div>
-                              <div className="font-bold text-lg">🎉 Special Deal!</div>
-                              <div className="text-sm">2+ Serums + Free Worldwide Shipping</div>
+                              <div className="font-bold text-base lg:text-lg">🎉 Special Deal!</div>
+                              <div className="text-xs lg:text-sm">2+ Serums + Free Worldwide Shipping</div>
                             </div>
                             <div className="text-right">
-                              <div className="text-2xl font-bold">£29.99</div>
-                              <div className="text-sm line-through opacity-75">
-                                {new Intl.NumberFormat("en", {
-                                  style: "currency",
-                                  currency: items[0]?.currencyCode || "GBP",
-                                }).format(items.reduce((total, item) => total + (item.price * item.quantity), 0))}
+                              <div className="text-xl lg:text-2xl font-bold">{location ? convertPrice(29.99) : "£29.99"}</div>
+                              <div className="text-xs lg:text-sm line-through opacity-75">
+                                {location ? convertPrice(items.reduce((total, item) => total + (item.price * item.quantity), 0)) : `£${items.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2)}`}
                               </div>
                             </div>
                           </div>
                         </div>
                         
-                        <div className="flex justify-between">
+                        <div className="flex justify-between text-sm lg:text-base">
                           <span className="text-gray-600">Subtotal ({getTotalItems()} items)</span>
-                          <span className="font-semibold text-lg">
-                            {new Intl.NumberFormat("en", {
-                              style: "currency",
-                              currency: items[0]?.currencyCode || "GBP",
-                            }).format(29.99)}
+                          <span className="font-semibold">
+                            {location ? convertPrice(getTotalPrice()) : `£${getTotalPrice().toFixed(2)}`}
                           </span>
                         </div>
                         
-                        <div className="flex justify-between">
+                        <div className="flex justify-between text-sm lg:text-base">
                           <span className="text-gray-600">Shipping</span>
                           <span className="font-semibold text-green-600">Free</span>
                         </div>
                         
                         <div className="border-t border-gray-300 pt-4">
-                          <div className="flex justify-between text-xl font-bold">
+                          <div className="flex justify-between text-lg lg:text-xl font-bold">
                             <span>Total</span>
                             <span>
-                              {new Intl.NumberFormat("en", {
-                                style: "currency",
-                                currency: items[0]?.currencyCode || "GBP",
-                              }).format(29.99)}
+                              {location ? convertPrice(getTotalPrice()) : `£${getTotalPrice().toFixed(2)}`}
                             </span>
                           </div>
                         </div>
@@ -231,26 +218,20 @@ export default function CartPage() {
                         <div className="flex justify-between">
                           <span className="text-gray-600">Subtotal ({getTotalItems()} items)</span>
                           <span className="font-semibold text-lg">
-                            {new Intl.NumberFormat("en", {
-                              style: "currency",
-                              currency: items[0]?.currencyCode || "GBP",
-                            }).format(getTotalPrice())}
+                            {location ? convertPrice(getTotalPrice()) : `£${getTotalPrice().toFixed(2)}`}
                           </span>
                         </div>
                         
                         <div className="flex justify-between">
                           <span className="text-gray-600">Shipping</span>
-                          <span className="font-semibold text-gray-600">£5.99</span>
+                          <span className="font-semibold text-gray-600">{location ? convertPrice(5.99) : "£5.99"}</span>
                         </div>
                         
                         <div className="border-t border-gray-300 pt-4">
                           <div className="flex justify-between text-xl font-bold">
                             <span>Total</span>
                             <span>
-                              {new Intl.NumberFormat("en", {
-                                style: "currency",
-                                currency: items[0]?.currencyCode || "GBP",
-                              }).format(getTotalPrice() + 5.99)}
+                              {location ? convertPrice(getTotalPrice() + 5.99) : `£${(getTotalPrice() + 5.99).toFixed(2)}`}
                             </span>
                           </div>
                         </div>
@@ -270,43 +251,55 @@ export default function CartPage() {
                     )}
                   </div>
 
-                  <div className="mt-8 space-y-4">
+                  <div className="mt-6 lg:mt-8 space-y-3 lg:space-y-4">
                     <button
                       onClick={async () => {
                         try {
+                          const checkoutItems = items.map(item => ({ variantId: item.variantId, quantity: item.quantity }));
+                          console.log('Sending to checkout:', checkoutItems);
+                          
                           const response = await fetch('/api/checkout', {
                             method: 'POST',
                             headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ items: items.map(item => ({ variantId: item.variantId, quantity: item.quantity })) })
+                            body: JSON.stringify({ items: checkoutItems })
                           });
+                          
                           if (response.ok) {
-                            window.location.href = response.url;
+                            const data = await response.json();
+                            if (data.url) {
+                              window.location.href = data.url;
+                            } else {
+                              console.error('No URL in response:', data);
+                            }
+                          } else {
+                            const errorData = await response.json();
+                            console.error('Checkout failed:', errorData);
                           }
                         } catch (error) {
                           console.error('Checkout failed:', error);
                         }
                       }}
-                      className="w-full text-white px-6 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-colors text-center"
-                      style={{ backgroundColor: '#4A6B8A' }}
+                      className="w-full text-white px-4 lg:px-6 py-3 lg:py-4 rounded-full font-semibold text-base lg:text-lg hover:opacity-90 transition-colors text-center"
+                      style={{ backgroundColor: '#1E3A8A' }}
                     >
                       Proceed to Checkout
                     </button>
                     
                     <Link
                       href="/product"
-                      className="w-full border-2 px-6 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-colors text-center block"
+                      className="w-full border-2 px-4 lg:px-6 py-3 lg:py-4 rounded-full font-semibold text-base lg:text-lg hover:opacity-90 transition-colors text-center block"
                       style={{ 
-                        borderColor: '#FF6B5B',
-                        color: '#FF6B5B',
+                        borderColor: '#B87333',
+                        color: '#B87333',
                         backgroundColor: 'transparent'
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = '#FF6B5B';
+                        e.currentTarget.style.backgroundColor = '#B87333';
                         e.currentTarget.style.color = '#F8FBFF';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.backgroundColor = 'transparent';
-                        e.currentTarget.style.color = '#FF6B5B';
+                        e.currentTarget.style.color = '#B87333';
                       }}
                     >
                       Continue Shopping
