@@ -287,12 +287,29 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
   }, [data.reviews, filters, sortBy]);
 
   const toggleFilter = (type: keyof typeof filters, value: string | number) => {
-    setFilters(prev => ({
-      ...prev,
-      [type]: prev[type].includes(value as never) 
-        ? prev[type].filter((v: any) => v !== value)
-        : [...prev[type], value]
-    }));
+    setFilters(prev => {
+      const currentValue = prev[type];
+      
+      // Handle boolean filters (media, verified)
+      if (typeof currentValue === 'boolean') {
+        return {
+          ...prev,
+          [type]: !currentValue
+        };
+      }
+      
+      // Handle array filters (rating, concerns, ageRange, location)
+      if (Array.isArray(currentValue)) {
+        return {
+          ...prev,
+          [type]: currentValue.includes(value as never) 
+            ? currentValue.filter((v: any) => v !== value)
+            : [...currentValue, value]
+        };
+      }
+      
+      return prev;
+    });
   };
 
   const clearFilters = () => {
