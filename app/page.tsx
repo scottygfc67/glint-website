@@ -2,7 +2,7 @@ import Hero from "@/components/Hero";
 import ScrollingMarquee from "@/components/ScrollingMarquee";
 import ProductCard from "@/components/ProductCard";
 import FeaturesSection from "@/components/FeaturesSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
+import ProductReviews from "@/components/ProductReviews";
 import Footer from "@/components/Footer";
 import { shopify } from "@/lib/shopify";
 import { gid } from "@/lib/ids";
@@ -62,7 +62,7 @@ export default async function Page() {
       <ScrollingMarquee />
       <ProductCard product={product || undefined} />
       <FeaturesSection />
-      <TestimonialsSection />
+      <ProductReviews />
       <Footer />
     </>
   );

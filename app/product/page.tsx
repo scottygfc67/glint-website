@@ -4,6 +4,7 @@ import AddToCart from "@/components/AddToCart";
 import QuantitySelector from "@/components/QuantitySelector";
 import Footer from "@/components/Footer";
 import ProductPageClient from "@/components/ProductPageClient";
+import ProductReviews from "@/components/ProductReviews";
 
 const PRODUCT_QUERY = /* GraphQL */ `
 query Product($id: ID!) {

@@ -2,6 +2,7 @@
 
 import { useLocation } from '@/contexts/LocationContext';
 import { BASE_PRICE_GBP, getCleanPrice, getCurrencySymbol } from '@/lib/pricing';
+import ProductReviews from './ProductReviews';
 
 interface HeroProps {
   product?: {
@@ -29,12 +30,13 @@ export default function Hero({ product }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center -mt-20 pt-20 sm:pt-36">
       {/* Hero Background Image */}
-      <div
-        className="absolute inset-0 h-full w-full bg-cover bg-no-repeat bg-center sm:bg-[center_20%_0px]"
-        style={{
-          backgroundImage: "url('/hero.png')"
-        }}
-      />
+      <div className="absolute inset-0 h-full w-full">
+        <img 
+          src="/hero.png" 
+          alt="GLINT Eye Glow Serum" 
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
       <div className="absolute inset-0 bg-black/70"></div>
       
       {/* Iridescent Pearl Ring - subtle overlay */}

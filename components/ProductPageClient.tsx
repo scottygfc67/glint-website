@@ -4,6 +4,7 @@ import { useState } from "react";
 import AddToCart from "@/components/AddToCart";
 import QuantitySelector from "@/components/QuantitySelector";
 import Footer from "@/components/Footer";
+import ProductReviews from "@/components/ProductReviews";
 
 interface ProductPageClientProps {
   product: {
@@ -307,6 +308,10 @@ export default function ProductPageClient({ product }: ProductPageClientProps) {
           </div>
         </div>
       </div>
+      
+      {/* Product Reviews Section */}
+      <ProductReviews />
+      
       <Footer />
     </>
   );

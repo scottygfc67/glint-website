@@ -2,16 +2,17 @@ interface PageHeroProps {
   title: string;
   subtitle?: string;
   description?: string;
+  backgroundImage?: string;
 }
 
-export default function PageHero({ title, subtitle, description }: PageHeroProps) {
+export default function PageHero({ title, subtitle, description, backgroundImage = '/heroextra.jpg' }: PageHeroProps) {
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center -mt-24 pt-40 sm:pt-32">
       {/* Hero Background Image */}
       <div
         className="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/heroextra.jpg')",
+          backgroundImage: `url('${backgroundImage}')`,
         }}
       />
       <div className="absolute inset-0 bg-black/30"></div>
