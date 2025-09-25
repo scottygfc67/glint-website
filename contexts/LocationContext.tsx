@@ -17,9 +17,8 @@ interface LocationContextType {
   location: LocationData | null;
   loading: boolean;
   error: string | null;
-  updateLocation: (newLocation: Partial<LocationData>) => void;
-  convertPrice: (price: number) => string;
-  formatPrice: (price: number, currency?: string) => string;
+  convertPrice: (priceInGBP: number) => string;
+  updateLocation: (newLocation: LocationData) => void;
 }
 
 const LocationContext = createContext<LocationContextType | undefined>(undefined);
@@ -32,21 +31,11 @@ const CURRENCY_SYMBOLS: { [key: string]: string } = {
   'CAD': 'C$',
   'AUD': 'A$',
   'JPY': '¥',
-  'CHF': 'CHF',
   'CNY': '¥',
+  'KRW': '₩',
   'INR': '₹',
   'BRL': 'R$',
   'MXN': '$',
-  'KRW': '₩',
-  'SGD': 'S$',
-  'NZD': 'NZ$',
-  'HKD': 'HK$',
-  'NOK': 'kr',
-  'SEK': 'kr',
-  'DKK': 'kr',
-  'PLN': 'zł',
-  'CZK': 'Kč',
-  'HUF': 'Ft',
   'RUB': '₽',
   'TRY': '₺',
   'ZAR': 'R',
@@ -100,11 +89,11 @@ const LANGUAGE_MAP: { [key: string]: string } = {
   'TW': 'zh',
   'HK': 'zh',
   'SG': 'en',
-  'MY': 'ms',
   'TH': 'th',
-  'ID': 'id',
-  'PH': 'en',
   'VN': 'vi',
+  'ID': 'id',
+  'MY': 'ms',
+  'PH': 'en',
   'IN': 'hi',
   'PK': 'ur',
   'BD': 'bn',
@@ -126,6 +115,8 @@ const LANGUAGE_MAP: { [key: string]: string } = {
   'EC': 'es',
   'GY': 'en',
   'SR': 'nl',
+  'GF': 'fr',
+  'FK': 'en',
   'ZA': 'en',
   'NG': 'en',
   'KE': 'en',
@@ -170,7 +161,6 @@ const LANGUAGE_MAP: { [key: string]: string } = {
   'SL': 'en',
   'LR': 'en',
   'CI': 'fr',
-  'GH': 'en',
   'TG': 'fr',
   'BJ': 'fr',
   'NE': 'fr',
@@ -178,20 +168,6 @@ const LANGUAGE_MAP: { [key: string]: string } = {
   'ML': 'fr',
   'SN': 'fr',
   'GM': 'en',
-  'GN': 'fr',
-  'GW': 'pt',
-  'LR': 'en',
-  'SL': 'en',
-  'CI': 'fr',
-  'GH': 'en',
-  'TG': 'fr',
-  'BJ': 'fr',
-  'NE': 'fr',
-  'BF': 'fr',
-  'ML': 'fr',
-  'SN': 'fr',
-  'GM': 'en',
-  'RU': 'ru',
   'UA': 'uk',
   'BY': 'be',
   'MD': 'ro',
@@ -219,19 +195,6 @@ const LANGUAGE_MAP: { [key: string]: string } = {
   'QA': 'ar',
   'BH': 'ar',
   'KW': 'ar',
-  'IQ': 'ar',
-  'SY': 'ar',
-  'LB': 'ar',
-  'JO': 'ar',
-  'IL': 'he',
-  'PS': 'ar',
-  'SA': 'ar',
-  'YE': 'ar',
-  'OM': 'ar',
-  'AE': 'ar',
-  'QA': 'ar',
-  'BH': 'ar',
-  'KW': 'ar',
 };
 
 export function LocationProvider({ children }: { children: ReactNode }) {
@@ -239,7 +202,6 @@ export function LocationProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Default fallback location (UK)
   const defaultLocation: LocationData = {
     country: 'United Kingdom',
     countryCode: 'GB',
@@ -248,6 +210,15 @@ export function LocationProvider({ children }: { children: ReactNode }) {
     language: 'en',
     exchangeRate: 1,
     locale: 'en-GB',
+  };
+
+  const convertPrice = (priceInGBP: number): string => {
+    if (!location) return `£${priceInGBP.toFixed(2)}`;
+    
+    const convertedPrice = priceInGBP * location.exchangeRate;
+    const roundedPrice = Math.round(convertedPrice * 100) / 100; // Round to 2 decimal places
+    
+    return `${location.currencySymbol}${roundedPrice.toFixed(2)}`;
   };
 
   // Detect user location
@@ -270,7 +241,7 @@ export function LocationProvider({ children }: { children: ReactNode }) {
         console.log('Detecting user location...');
         const response = await fetch('https://ipapi.co/json/');
         const data = await response.json();
-        
+
         console.log('Location API response:', data);
 
         if (data.error) {
@@ -316,43 +287,13 @@ export function LocationProvider({ children }: { children: ReactNode }) {
     detectLocation();
   }, []);
 
-  const updateLocation = (newLocation: Partial<LocationData>) => {
-    if (location) {
-      const updatedLocation = { ...location, ...newLocation };
-      setLocation(updatedLocation);
-      localStorage.setItem('glint-location', JSON.stringify(updatedLocation));
-    }
-  };
-
-  const convertPrice = (price: number): string => {
-    if (!location) return `£${price.toFixed(2)}`;
-    
-    const convertedPrice = price * location.exchangeRate;
-    return `${location.currencySymbol}${convertedPrice.toFixed(2)}`;
-  };
-
-  const formatPrice = (price: number, currency?: string): string => {
-    if (!location && !currency) return `£${price.toFixed(2)}`;
-    
-    const targetCurrency = currency || location?.currency || 'GBP';
-    const symbol = CURRENCY_SYMBOLS[targetCurrency] || targetCurrency;
-    const rate = currency === 'GBP' ? 1 : (location?.exchangeRate || 1);
-    const convertedPrice = price * rate;
-    
-    return `${symbol}${convertedPrice.toFixed(2)}`;
-  };
-
-  const value: LocationContextType = {
-    location,
-    loading,
-    error,
-    updateLocation,
-    convertPrice,
-    formatPrice,
+  const updateLocation = (newLocation: LocationData) => {
+    setLocation(newLocation);
+    localStorage.setItem('glint-location', JSON.stringify(newLocation));
   };
 
   return (
-    <LocationContext.Provider value={value}>
+    <LocationContext.Provider value={{ location, loading, error, convertPrice, updateLocation }}>
       {children}
     </LocationContext.Provider>
   );

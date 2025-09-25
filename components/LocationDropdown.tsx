@@ -124,7 +124,10 @@ export default function LocationDropdown({ isMobile = false, className = '' }: L
                 onError={(e) => {
                   // Fallback to emoji if image fails to load
                   e.currentTarget.style.display = 'none';
-                  e.currentTarget.nextElementSibling.style.display = 'block';
+                  const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                  if (nextElement) {
+                    nextElement.style.display = 'block';
+                  }
                 }}
               />
             ) : null}
@@ -178,7 +181,10 @@ export default function LocationDropdown({ isMobile = false, className = '' }: L
                         onError={(e) => {
                           // Fallback to emoji if image fails to load
                           e.currentTarget.style.display = 'none';
-                          e.currentTarget.nextElementSibling.style.display = 'block';
+                          const nextElement = e.currentTarget.nextElementSibling as HTMLElement;
+                          if (nextElement) {
+                            nextElement.style.display = 'block';
+                          }
                         }}
                       />
                     ) : null}

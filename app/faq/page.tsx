@@ -148,7 +148,7 @@ export default function FAQPage() {
                         <button
                           onClick={() => toggleItem(categoryIndex, faqIndex)}
                           className="w-full px-4 lg:px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
-                          style={{ focusRingColor: '#1E3A8A' }}
+                          style={{ '--tw-ring-color': '#1E3A8A' } as React.CSSProperties}
                         >
                           <div className="flex items-center justify-between">
                             <h3 className="text-base lg:text-lg font-semibold text-gray-900 pr-4">
