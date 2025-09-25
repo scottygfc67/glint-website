@@ -5,6 +5,10 @@ import AddToCart from "@/components/AddToCart";
 import QuantitySelector from "@/components/QuantitySelector";
 import Footer from "@/components/Footer";
 import ProductReviews from "@/components/ProductReviews";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import OverviewContent from "@/components/product/OverviewContent";
+import KeyBenefitsContent from "@/components/product/KeyBenefitsContent";
+import { howItWorksSteps, faqItems } from "@/lib/productData";
 
 interface ProductPageClientProps {
   product: {
@@ -114,41 +118,24 @@ export default function ProductPageClient({ product }: ProductPageClientProps) {
                 </div>
               </div>
 
-              {/* Product Information Accordion */}
+              {/* Product Details Section */}
               <div className="border-t border-gray-200 pt-8">
-                <h3 className="text-lg font-medium text-gray-900 mb-6">Product Information</h3>
+                <h3 className="text-xl font-semibold text-gray-900 mb-6" style={{ color: '#4A6B8A' }}>
+                  Product Details
+                </h3>
+                
+                {/* Product Information Accordions */}
                 <div className="space-y-4">
                   {/* Product Details */}
                   <details className="group">
                     <summary className="flex justify-between items-center w-full p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors">
-                      <span className="font-medium text-gray-900">Product Details</span>
+                      <span className="font-medium text-gray-900">What it is</span>
                       <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </summary>
-                    <div className="mt-4 p-4 bg-white border border-gray-200 rounded-lg">
-                      <div className="space-y-3 text-sm text-gray-600">
-                        <div className="flex justify-between">
-                          <span>Volume:</span>
-                          <span>8ml / 0.27 fl oz</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Skin Type:</span>
-                          <span>All skin types</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Application:</span>
-                          <span>Morning and evening</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Results:</span>
-                          <span>Visible in 7 days</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span>Packaging:</span>
-                          <span>Recyclable glass bottle</span>
-                        </div>
-                      </div>
+                    <div className="mt-4">
+                      <OverviewContent />
                     </div>
                   </details>
 
@@ -160,56 +147,8 @@ export default function ProductPageClient({ product }: ProductPageClientProps) {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </summary>
-                    <div className="mt-4 p-4 bg-white border border-gray-200 rounded-lg">
-                      <ul className="space-y-3">
-                        {[
-                          "Reduces dark circles and puffiness",
-                          "Brightens and evens skin tone",
-                          "Cooling metallic applicator for instant relief",
-                          "Hydrates and plumps under-eye area",
-                          "Clinically tested and dermatologist approved",
-                          "Reduces fine lines and wrinkles",
-                          "Improves skin elasticity",
-                          "Non-greasy, fast-absorbing formula"
-                        ].map((benefit, index) => (
-                          <li key={index} className="flex items-center text-sm text-gray-600">
-                            <svg className="w-4 h-4 mr-3" fill="#C19477" viewBox="0 0 20 20">
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                            </svg>
-                            {benefit}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </details>
-
-                  {/* Ingredients */}
-                  <details className="group">
-                    <summary className="flex justify-between items-center w-full p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors">
-                      <span className="font-medium text-gray-900">Key Ingredients</span>
-                      <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                      </svg>
-                    </summary>
-                    <div className="mt-4 p-4 bg-white border border-gray-200 rounded-lg">
-                      <div className="space-y-4 text-sm text-gray-600">
-                        <div>
-                          <h4 className="font-medium text-gray-900 mb-2">Hyaluronic Acid</h4>
-                          <p>Deeply hydrates and plumps the under-eye area, reducing the appearance of fine lines.</p>
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-gray-900 mb-2">Caffeine</h4>
-                          <p>Reduces puffiness and dark circles by constricting blood vessels and improving circulation.</p>
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-gray-900 mb-2">Vitamin C</h4>
-                          <p>Brightens skin tone and reduces hyperpigmentation for a more even complexion.</p>
-                        </div>
-                        <div>
-                          <h4 className="font-medium text-gray-900 mb-2">Peptides</h4>
-                          <p>Stimulate collagen production to improve skin firmness and elasticity.</p>
-                        </div>
-                      </div>
+                    <div className="mt-4">
+                      <KeyBenefitsContent />
                     </div>
                   </details>
 
@@ -222,51 +161,37 @@ export default function ProductPageClient({ product }: ProductPageClientProps) {
                       </svg>
                     </summary>
                     <div className="mt-4 p-4 bg-white border border-gray-200 rounded-lg">
-                      <ol className="space-y-3 text-sm text-gray-600">
-                        <li className="flex items-start">
-                          <span className="flex-shrink-0 w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center text-xs font-medium text-gray-600 mr-3">1</span>
-                          <span>Cleanse your face and pat dry</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="flex-shrink-0 w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center text-xs font-medium text-gray-600 mr-3">2</span>
-                          <span>Apply a small amount to the under-eye area using the metallic rollerball</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="flex-shrink-0 w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center text-xs font-medium text-gray-600 mr-3">3</span>
-                          <span>Gently roll from the inner corner to the outer corner of the eye</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="flex-shrink-0 w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center text-xs font-medium text-gray-600 mr-3">4</span>
-                          <span>Pat gently with your ring finger to help absorption</span>
-                        </li>
-                        <li className="flex items-start">
-                          <span className="flex-shrink-0 w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center text-xs font-medium text-gray-600 mr-3">5</span>
-                          <span>Use morning and evening for best results</span>
-                        </li>
+                      <ol className="space-y-2 text-gray-600">
+                        <li>1. Roll under each eye AM and/or PM on clean skin</li>
+                        <li>2. Tap gently with your ring finger to help absorption</li>
+                        <li>3. Wait 60 seconds before makeup</li>
+                        <li>4. Pro tip: keep in the fridge for extra cooling</li>
                       </ol>
                     </div>
                   </details>
 
-                  {/* Clinical Studies */}
+                  {/* Ingredients */}
                   <details className="group">
                     <summary className="flex justify-between items-center w-full p-4 bg-gray-50 rounded-lg cursor-pointer hover:bg-gray-100 transition-colors">
-                      <span className="font-medium text-gray-900">Clinical Studies</span>
+                      <span className="font-medium text-gray-900">Key Ingredients</span>
                       <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </summary>
                     <div className="mt-4 p-4 bg-white border border-gray-200 rounded-lg">
-                      <div className="space-y-4 text-sm text-gray-600">
-                        <div className="bg-blue-50 p-4 rounded-lg">
-                          <h4 className="font-medium text-gray-900 mb-2">Study Results (4 weeks)</h4>
-                          <ul className="space-y-1">
-                            <li>• 94% of participants saw reduced puffiness</li>
-                            <li>• 89% noticed brighter under-eye area</li>
-                            <li>• 87% reported smoother skin texture</li>
-                            <li>• 92% would recommend to others</li>
-                          </ul>
+                      <div className="grid md:grid-cols-2 gap-4 text-gray-600">
+                        <div>
+                          <span className="font-medium">Caffeine (3%)</span> - Energises and de-puffs
                         </div>
-                        <p className="text-xs text-gray-500">*Results based on clinical study of 100 participants over 4 weeks</p>
+                        <div>
+                          <span className="font-medium">Peptide Complex</span> - Smoother, firmer appearance
+                        </div>
+                        <div>
+                          <span className="font-medium">Niacinamide (2%)</span> - Brightens and supports barrier
+                        </div>
+                        <div>
+                          <span className="font-medium">Hyaluronic Acid</span> - Long-lasting hydration
+                        </div>
                       </div>
                     </div>
                   </details>
@@ -280,23 +205,19 @@ export default function ProductPageClient({ product }: ProductPageClientProps) {
                       </svg>
                     </summary>
                     <div className="mt-4 p-4 bg-white border border-gray-200 rounded-lg">
-                      <div className="space-y-4 text-sm text-gray-600">
+                      <div className="space-y-4 text-gray-600">
                         <div>
                           <h4 className="font-medium text-gray-900 mb-2">Shipping</h4>
-                          <ul className="space-y-1">
-                            <li>• Free shipping on orders over £50</li>
-                            <li>• Standard delivery: 2-3 business days</li>
-                            <li>• Express delivery: Next day (available)</li>
-                            <li>• International shipping available</li>
+                          <ul className="space-y-1 text-sm">
+                            <li>• Free worldwide shipping on qualifying orders</li>
+                            <li>• UK: 2-4 days, EU: 4-7 days, US: 5-8 days</li>
                           </ul>
                         </div>
                         <div>
                           <h4 className="font-medium text-gray-900 mb-2">Returns</h4>
-                          <ul className="space-y-1">
+                          <ul className="space-y-1 text-sm">
                             <li>• 30-day money-back guarantee</li>
-                            <li>• Free returns within UK</li>
-                            <li>• Unused products only</li>
-                            <li>• Contact support for return label</li>
+                            <li>• See returns policy for details</li>
                           </ul>
                         </div>
                       </div>
@@ -304,10 +225,136 @@ export default function ProductPageClient({ product }: ProductPageClientProps) {
                   </details>
                 </div>
               </div>
+
             </div>
           </div>
         </div>
       </div>
+      
+      {/* Before & After Section */}
+      <section className="py-12 md:py-20 bg-white">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          {/* Section Header */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#4A6B8A' }}>
+              Real Results from Real Customers
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              See the difference GLINT makes with consistent use. Photos unretouched; lighting matched.
+            </p>
+          </div>
+
+          {/* Before & After Images */}
+          <div className="relative overflow-hidden rounded-2xl bg-gray-50 shadow-lg">
+            <div className="flex">
+              {/* Before Image */}
+              <div className="w-1/2 relative">
+                <div className="aspect-square relative">
+                  <img
+                    src="/before.png"
+                    alt="Before using GLINT Eye Glow Serum"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute top-6 left-6">
+                  <span 
+                    className="px-4 py-2 rounded-full text-sm font-semibold text-white shadow-lg"
+                    style={{ backgroundColor: '#4A6B8A' }}
+                  >
+                    Before
+                  </span>
+                </div>
+              </div>
+
+              {/* After Image */}
+              <div className="w-1/2 relative">
+                <div className="aspect-square relative">
+                  <img
+                    src="/after.png"
+                    alt="After using GLINT Eye Glow Serum for 3 weeks"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="absolute top-6 right-6">
+                  <span 
+                    className="px-4 py-2 rounded-full text-sm font-semibold text-white shadow-lg"
+                    style={{ backgroundColor: '#B8860B' }}
+                  >
+                    After
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Divider Line */}
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-white shadow-lg"></div>
+          </div>
+
+          {/* Results Caption */}
+          <div className="text-center mt-8">
+            <p className="text-sm text-gray-600">
+              <strong>Sarah M., Birmingham, UK</strong> — 3 weeks of AM/PM usage
+            </p>
+            <p className="text-xs text-gray-500 mt-1">
+              Photos unretouched; lighting matched
+            </p>
+          </div>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12">
+            <button
+              className="px-8 py-4 rounded-full font-semibold text-white hover:opacity-90 transition-opacity shadow-lg"
+              style={{ backgroundColor: '#4A6B8A' }}
+            >
+              Buy Now
+            </button>
+            <button
+              className="px-8 py-4 rounded-full font-semibold border-2 hover:opacity-90 transition-opacity"
+              style={{ 
+                borderColor: '#B8860B',
+                color: '#B8860B'
+              }}
+              onClick={() => {
+                // Scroll to How It Works section
+                const element = document.getElementById('how-it-works');
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              See How It Works
+            </button>
+          </div>
+        </div>
+      </section>
+      
+      {/* How It Works Section */}
+      <HowItWorksSection steps={howItWorksSteps} />
+      
+      {/* Simple FAQ Section */}
+      <section className="py-12 md:py-20 bg-gray-50">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#4A6B8A' }}>
+              Frequently Asked Questions
+            </h2>
+          </div>
+          
+          <div className="space-y-4">
+            {faqItems.slice(0, 6).map((item, index) => (
+              <details key={index} className="group bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <summary className="flex justify-between items-center w-full p-6 cursor-pointer hover:bg-gray-50 transition-colors">
+                  <span className="font-medium text-gray-900">{item.q}</span>
+                  <svg className="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="px-6 pb-6">
+                  <p className="text-gray-600">{item.a}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
       
       {/* Product Reviews Section */}
       <ProductReviews />
