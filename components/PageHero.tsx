@@ -33,11 +33,12 @@ export default function PageHero({ title, subtitle, description }: PageHeroProps
             </p>
           )}
           
-          {/* Black Accent Button */}
+          {/* Icy Navy Button */}
           <div className="pt-4">
             <a
               href="/api/checkout?qty=1"
-              className="inline-flex items-center bg-black text-white px-8 py-4 rounded-full text-lg font-semibold transition-all hover:bg-gray-800 hover:scale-105 shadow-2xl"
+              className="inline-flex items-center text-white px-8 py-4 rounded-full text-lg font-semibold transition-all hover:opacity-90 hover:scale-105 shadow-2xl"
+              style={{ backgroundColor: '#4A6B8A' }}
             >
               Shop Now
               <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

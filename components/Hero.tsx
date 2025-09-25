@@ -30,10 +30,10 @@ export default function Hero({ product }: HeroProps) {
       <div
         className="absolute inset-0 h-full w-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/hero.jpg')",
+          backgroundImage: "url('/hero.png')",
         }}
       />
-      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-black/50"></div>
       
       {/* Iridescent Pearl Ring - subtle overlay */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(closest-side,rgba(220,232,255,.08),transparent_60%)]"></div>
@@ -42,7 +42,8 @@ export default function Hero({ product }: HeroProps) {
       <div className="relative mx-auto max-w-4xl px-4 py-20 text-center">
         <div className="space-y-8">
           <div className="space-y-6">
-            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold tracking-wide uppercase bg-black text-white border border-gray-600">
+            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold tracking-wide uppercase text-white border border-gray-600"
+                  style={{ backgroundColor: '#4A6B8A' }}>
               <svg className="w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
               </svg>
@@ -63,7 +64,7 @@ export default function Hero({ product }: HeroProps) {
           {/* Price & Rating */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
             <div className="flex items-center gap-4">
-              <span className="text-4xl lg:text-5xl font-bold text-black drop-shadow-2xl">{price}</span>
+              <span className="text-4xl lg:text-5xl font-bold text-white drop-shadow-2xl">{price}</span>
               {variant?.compareAtPrice && (
                 <span className="text-2xl text-gray-300 line-through font-light drop-shadow-lg">{compareAtPrice}</span>
               )}
@@ -82,13 +83,22 @@ export default function Hero({ product }: HeroProps) {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/api/checkout?qty=1"
-              className="rounded-full px-8 py-4 bg-black text-white text-lg font-semibold transition-colors text-center shadow-2xl hover:shadow-3xl transform hover:-translate-y-0.5 focus-visible:outline-none hover:bg-gray-800"
+              className="rounded-full px-8 py-4 text-lg font-semibold transition-colors text-center shadow-2xl hover:shadow-3xl transform hover:-translate-y-0.5 focus-visible:outline-none hover:opacity-90"
+              style={{ 
+                backgroundColor: '#4A6B8A',
+                color: '#F8FBFF'
+              }}
             >
               Buy Now - {price}
             </a>
             <a
               href="/product"
-              className="rounded-full px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-[var(--ink)] text-lg font-semibold transition-colors text-center backdrop-blur-sm bg-white/10"
+              className="rounded-full px-8 py-4 border-2 text-lg font-semibold transition-colors text-center backdrop-blur-sm hover:opacity-90"
+              style={{ 
+                backgroundColor: '#FF6B5B',
+                borderColor: '#FF6B5B',
+                color: '#F8FBFF'
+              }}
             >
               View Details
             </a>

@@ -19,7 +19,8 @@ export default function GlassNav() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-10 z-50 bg-[var(--bg)] border-b border-[var(--hairline)]">
+    <header className="fixed inset-x-0 top-10 z-50 border-b border-[var(--hairline)]"
+            style={{ backgroundColor: '#F8FBFF' }}>
       <nav className="w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
           {/* Logo */}
@@ -85,7 +86,8 @@ export default function GlassNav() {
             </Link>
             <Link
               href="/api/checkout?qty=1"
-              className="rounded-full px-6 py-3 bg-black text-white text-sm font-semibold transition-colors focus-visible:outline-none hover:bg-gray-800"
+              className="rounded-full px-6 py-3 text-white text-sm font-semibold transition-colors focus-visible:outline-none hover:opacity-90"
+              style={{ backgroundColor: '#4A6B8A' }}
             >
               Buy Now
             </Link>
@@ -107,7 +109,8 @@ export default function GlassNav() {
         {/* Mobile menu */}
         {mobileMenuOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-[var(--bg)] border-t border-[var(--hairline)]">
+            <div className="px-2 pt-2 pb-3 space-y-1 border-t border-[var(--hairline)]"
+                 style={{ backgroundColor: '#F8FBFF' }}>
               <Link
                 href="/"
                 className="block px-3 py-2 text-base font-medium text-[var(--ink)]/80 hover:text-[var(--ink)]"
@@ -152,7 +155,8 @@ export default function GlassNav() {
               </Link>
               <Link
                 href="/api/checkout?qty=1"
-                className="block px-3 py-2 text-base font-medium text-white rounded-full mx-3 text-center bg-black hover:bg-gray-800"
+                className="block px-3 py-2 text-base font-medium text-white rounded-full mx-3 text-center hover:opacity-90"
+                style={{ backgroundColor: '#4A6B8A' }}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Buy Now

@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import { useCart } from "@/contexts/CartContext";
 
 interface ProductCardProps {
   product?: {
@@ -23,6 +24,8 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   const [selectedQuantity, setSelectedQuantity] = useState(2); // Default to 2 bottles (best value)
+  const [added, setAdded] = useState(false);
+  const { addItem } = useCart();
   const title = product?.title || "GLINT Eye Glow Serum";
   const description = product?.description || "Cooling rollerball brightens, hydrates and depuffs. 8 ml / 0.27 fl oz.";
   const imageUrl = product?.featuredImage?.url || "/hero.png";
@@ -45,7 +48,8 @@ export default function ProductCard({ product }: ProductCardProps) {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center bg-blue-50 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6"
+               style={{ backgroundColor: '#4A6B8A', color: '#F8FBFF' }}>
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
@@ -53,7 +57,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </div>
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Transform Your
-            <span className="block" style={{color: '#C19477'}}>
+            <span className="block" style={{color: '#FF6B5B'}}>
               Under-Eye Area
             </span>
           </h2>
@@ -96,7 +100,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                 {compareAtPrice && (
                   <>
                     <span className="text-2xl text-gray-400 line-through">{compareAtPrice}</span>
-                    <span className="bg-blue-100 text-blue-800 text-sm font-bold px-3 py-1 rounded-full">
+                    <span className="text-sm font-bold px-3 py-1 rounded-full"
+                          style={{ backgroundColor: '#FF6B5B', color: '#F8FBFF' }}>
                       SAVE {Math.round((1 - Number(variant?.price.amount) / Number(variant?.compareAtPrice?.amount)) * 100)}%
                     </span>
                   </>
@@ -111,8 +116,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div 
                   className={`flex items-center justify-between p-4 rounded-xl border-2 transition-colors cursor-pointer ${
                     selectedQuantity === 1 
-                      ? 'bg-blue-50 border-blue-400' 
-                      : 'bg-white/50 border-gray-200 hover:border-blue-400'
+                      ? 'border-[#4A6B8A] bg-white/50' 
+                      : 'bg-white/50 border-gray-200 hover:border-[#4A6B8A]'
                   }`}
                   onClick={() => setSelectedQuantity(1)}
                 >
@@ -123,7 +128,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                       value="1" 
                       checked={selectedQuantity === 1}
                       onChange={() => setSelectedQuantity(1)}
-                      className="w-4 h-4 text-blue-600" 
+                      className="w-4 h-4"
+                      style={{ accentColor: '#4A6B8A' }} 
                     />
                     <div>
                       <div className="font-semibold text-gray-900">Single Bottle</div>
@@ -139,12 +145,13 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div 
                   className={`flex items-center justify-between p-4 rounded-xl border-2 transition-colors cursor-pointer relative ${
                     selectedQuantity === 2 
-                      ? 'bg-blue-50 border-blue-400' 
-                      : 'bg-white/50 border-gray-200 hover:border-blue-400'
+                      ? 'border-[#4A6B8A] bg-white/50' 
+                      : 'bg-white/50 border-gray-200 hover:border-[#4A6B8A]'
                   }`}
                   onClick={() => setSelectedQuantity(2)}
                 >
-                  <div className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                  <div className="absolute -top-2 -right-2 text-white text-xs font-bold px-2 py-1 rounded-full"
+                       style={{ backgroundColor: '#FF6B5B' }}>
                     BEST VALUE
                   </div>
                   <div className="flex items-center space-x-3">
@@ -154,7 +161,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                       value="2" 
                       checked={selectedQuantity === 2}
                       onChange={() => setSelectedQuantity(2)}
-                      className="w-4 h-4 text-blue-600" 
+                      className="w-4 h-4"
+                      style={{ accentColor: '#4A6B8A' }} 
                     />
                     <div>
                       <div className="font-semibold text-gray-900">2 Bottles</div>
@@ -174,8 +182,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div 
                   className={`flex items-center justify-between p-4 rounded-xl border-2 transition-colors cursor-pointer ${
                     selectedQuantity === 3 
-                      ? 'bg-blue-50 border-blue-400' 
-                      : 'bg-white/50 border-gray-200 hover:border-blue-400'
+                      ? 'border-[#4A6B8A] bg-white/50' 
+                      : 'bg-white/50 border-gray-200 hover:border-[#4A6B8A]'
                   }`}
                   onClick={() => setSelectedQuantity(3)}
                 >
@@ -186,7 +194,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                       value="3" 
                       checked={selectedQuantity === 3}
                       onChange={() => setSelectedQuantity(3)}
-                      className="w-4 h-4 text-blue-600" 
+                      className="w-4 h-4"
+                      style={{ accentColor: '#4A6B8A' }} 
                     />
                     <div>
                       <div className="font-semibold text-gray-900">3 Bottles</div>
@@ -203,15 +212,47 @@ export default function ProductCard({ product }: ProductCardProps) {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href={`/api/checkout?qty=${selectedQuantity}`}
-                className="flex-1 bg-black text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center hover:bg-gray-800"
+              <button
+                onClick={() => {
+                  const variant = product?.variants?.nodes?.[0];
+                  if (variant) {
+                    addItem({
+                      variantId: variant.id,
+                      title: title,
+                      price: Number(variant.price.amount),
+                      currencyCode: variant.price.currencyCode,
+                      image: imageUrl,
+                      quantity: selectedQuantity,
+                    });
+                    setAdded(true);
+                    setTimeout(() => setAdded(false), 2000);
+                  }
+                }}
+                className={`flex-1 px-8 py-4 rounded-lg font-semibold text-lg transition-colors text-center ${
+                  added
+                    ? "bg-green-600 text-white"
+                    : "text-white hover:opacity-90"
+                }`}
+                style={!added ? { backgroundColor: '#4A6B8A' } : {}}
               >
-                Add to Cart
-              </a>
+                {added ? "✓ Added to Cart!" : "Add to Cart"}
+              </button>
               <a 
                 href={`/api/checkout?qty=${selectedQuantity}`}
-                className="flex-1 border-2 border-black text-black px-8 py-4 rounded-lg font-semibold text-lg transition-all text-center hover:bg-black hover:text-white"
+                className="flex-1 border-2 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-center hover:opacity-90"
+                style={{ 
+                  borderColor: '#FF6B5B',
+                  color: '#FF6B5B',
+                  backgroundColor: 'transparent'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#FF6B5B';
+                  e.currentTarget.style.color = '#F8FBFF';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.color = '#FF6B5B';
+                }}
               >
                 Buy Now
               </a>

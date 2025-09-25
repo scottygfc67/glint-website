@@ -45,20 +45,26 @@ export function CartProvider({ children }: { children: ReactNode }) {
   }, [items]);
 
   const addItem = (newItem: Omit<CartItem, 'id'>) => {
+    console.log('CartContext: Adding item:', newItem);
     setItems(prevItems => {
+      console.log('CartContext: Current items before add:', prevItems);
       const existingItem = prevItems.find(item => item.variantId === newItem.variantId);
       
       if (existingItem) {
         // Update quantity if item already exists
-        return prevItems.map(item =>
+        const updatedItems = prevItems.map(item =>
           item.variantId === newItem.variantId
             ? { ...item, quantity: item.quantity + newItem.quantity }
             : item
         );
+        console.log('CartContext: Updated existing item, new items:', updatedItems);
+        return updatedItems;
       } else {
         // Add new item with unique ID
         const id = `${newItem.variantId}-${Date.now()}`;
-        return [...prevItems, { ...newItem, id }];
+        const newItems = [...prevItems, { ...newItem, id }];
+        console.log('CartContext: Added new item, new items:', newItems);
+        return newItems;
       }
     });
   };
@@ -85,6 +91,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
   };
 
   const getTotalPrice = () => {
+    const totalItems = getTotalItems();
+    
+    // Special deal: 2 serums + free worldwide shipping for £29.99
+    if (totalItems >= 2) {
+      return 29.99; // Fixed price for 2+ items
+    }
+    
+    // Regular pricing for single items
     return items.reduce((total, item) => total + (item.price * item.quantity), 0);
   };
 
