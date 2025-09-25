@@ -776,29 +776,6 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
         </div>
       </div>
 
-      {/* Mobile Sticky CTA */}
-      <div className="fixed bottom-0 left-0 right-0 sm:hidden p-4 bg-white border-t shadow-lg">
-        <div className="flex space-x-3">
-          <button
-            className="flex-1 px-4 py-3 rounded-full font-semibold text-center"
-            style={{ 
-              backgroundColor: '#4A6B8A',
-              color: '#F8FBFF'
-            }}
-          >
-            Buy Now
-          </button>
-          <button
-            className="flex-1 px-4 py-3 rounded-full font-semibold text-center border-2"
-            style={{ 
-              borderColor: '#B8860B',
-              color: '#B8860B'
-            }}
-          >
-            Write Review
-          </button>
-        </div>
-      </div>
     </section>
   );
 }
