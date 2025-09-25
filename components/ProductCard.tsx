@@ -51,7 +51,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6"
-               style={{ backgroundColor: '#1E3A8A', color: '#F8FBFF' }}>
+               style={{ backgroundColor: '#4A6B8A', color: '#F8FBFF' }}>
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
@@ -59,7 +59,7 @@ export default function ProductCard({ product }: ProductCardProps) {
           </div>
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
             Transform Your
-            <span className="block" style={{color: '#B87333'}}>
+            <span className="block" style={{color: '#B8860B'}}>
               Under-Eye Area
             </span>
           </h2>
@@ -101,7 +101,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <span className="text-4xl font-bold text-gray-900">{localizedPrice}</span>
                 <span className="text-2xl text-gray-400 line-through">{localizedComparePrice}</span>
                 <span className="text-sm font-bold px-3 py-1 rounded-full"
-                      style={{ backgroundColor: '#B87333', color: '#F8FBFF' }}>
+                      style={{ backgroundColor: '#B8860B', color: '#F8FBFF' }}>
                   SAVE {Math.round((1 - basePrice / compareAtPriceAmount) * 100)}%
                 </span>
               </div>
@@ -114,8 +114,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div 
                   className={`flex items-center justify-between p-4 rounded-xl border-2 transition-colors cursor-pointer ${
                     selectedQuantity === 1 
-                      ? 'border-[#1E3A8A] bg-white/50' 
-                      : 'bg-white/50 border-gray-200 hover:border-[#1E3A8A]'
+                      ? 'border-[#4A6B8A] bg-white/50' 
+                      : 'bg-white/50 border-gray-200 hover:border-[#4A6B8A]'
                   }`}
                   onClick={() => setSelectedQuantity(1)}
                 >
@@ -127,7 +127,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                       checked={selectedQuantity === 1}
                       onChange={() => setSelectedQuantity(1)}
                       className="w-4 h-4"
-                      style={{ accentColor: '#1E3A8A' }} 
+                      style={{ accentColor: '#4A6B8A' }} 
                     />
                     <div>
                       <div className="font-semibold text-gray-900">Single Bottle</div>
@@ -143,13 +143,13 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div 
                   className={`flex items-center justify-between p-4 rounded-xl border-2 transition-colors cursor-pointer relative ${
                     selectedQuantity === 2 
-                      ? 'border-[#1E3A8A] bg-white/50' 
-                      : 'bg-white/50 border-gray-200 hover:border-[#1E3A8A]'
+                      ? 'border-[#4A6B8A] bg-white/50' 
+                      : 'bg-white/50 border-gray-200 hover:border-[#4A6B8A]'
                   }`}
                   onClick={() => setSelectedQuantity(2)}
                 >
                   <div className="absolute -top-2 -right-2 text-white text-xs font-bold px-2 py-1 rounded-full"
-                       style={{ backgroundColor: '#B87333' }}>
+                       style={{ backgroundColor: '#B8860B' }}>
                     BEST VALUE
                   </div>
                   <div className="flex items-center space-x-3">
@@ -160,7 +160,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                       checked={selectedQuantity === 2}
                       onChange={() => setSelectedQuantity(2)}
                       className="w-4 h-4"
-                      style={{ accentColor: '#1E3A8A' }} 
+                      style={{ accentColor: '#4A6B8A' }} 
                     />
                     <div>
                       <div className="font-semibold text-gray-900">2 Bottles</div>
@@ -180,8 +180,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div 
                   className={`flex items-center justify-between p-4 rounded-xl border-2 transition-colors cursor-pointer ${
                     selectedQuantity === 3 
-                      ? 'border-[#1E3A8A] bg-white/50' 
-                      : 'bg-white/50 border-gray-200 hover:border-[#1E3A8A]'
+                      ? 'border-[#4A6B8A] bg-white/50' 
+                      : 'bg-white/50 border-gray-200 hover:border-[#4A6B8A]'
                   }`}
                   onClick={() => setSelectedQuantity(3)}
                 >
@@ -193,7 +193,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                       checked={selectedQuantity === 3}
                       onChange={() => setSelectedQuantity(3)}
                       className="w-4 h-4"
-                      style={{ accentColor: '#1E3A8A' }} 
+                      style={{ accentColor: '#4A6B8A' }} 
                     />
                     <div>
                       <div className="font-semibold text-gray-900">3 Bottles</div>
@@ -231,7 +231,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                     ? "bg-green-600 text-white"
                     : "text-white hover:opacity-90"
                 }`}
-                style={!added ? { backgroundColor: '#1E3A8A' } : {}}
+                style={!added ? { backgroundColor: '#4A6B8A' } : {}}
               >
                 {added ? "✓ Added to Cart!" : "Add to Cart"}
               </button>
@@ -239,17 +239,17 @@ export default function ProductCard({ product }: ProductCardProps) {
                 href={`/api/checkout?qty=${selectedQuantity}`}
                 className="flex-1 border-2 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-center hover:opacity-90"
                 style={{ 
-                  borderColor: '#B87333',
-                  color: '#B87333',
+                  borderColor: '#B8860B',
+                  color: '#B8860B',
                   backgroundColor: 'transparent'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#B87333';
+                  e.currentTarget.style.backgroundColor = '#B8860B';
                   e.currentTarget.style.color = '#F8FBFF';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = 'transparent';
-                  e.currentTarget.style.color = '#B87333';
+                  e.currentTarget.style.color = '#B8860B';
                 }}
               >
                 Buy Now

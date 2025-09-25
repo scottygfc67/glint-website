@@ -33,7 +33,7 @@ export default function CartPage() {
                 <Link 
                   href="/product"
                   className="inline-flex items-center text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-colors"
-                  style={{ backgroundColor: '#1E3A8A' }}
+                  style={{ backgroundColor: '#4A6B8A' }}
                 >
                   Continue Shopping
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -117,7 +117,7 @@ export default function CartPage() {
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
                           className="w-10 h-10 rounded-full border flex items-center justify-center hover:opacity-90 transition-colors"
-                          style={{ backgroundColor: '#1E3A8A', borderColor: '#1E3A8A' }}
+                          style={{ backgroundColor: '#4A6B8A', borderColor: '#4A6B8A' }}
                         >
                           <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
@@ -127,7 +127,7 @@ export default function CartPage() {
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
                           className="w-10 h-10 rounded-full border flex items-center justify-center hover:opacity-90 transition-colors"
-                          style={{ backgroundColor: '#1E3A8A', borderColor: '#1E3A8A' }}
+                          style={{ backgroundColor: '#4A6B8A', borderColor: '#4A6B8A' }}
                         >
                           <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -146,7 +146,7 @@ export default function CartPage() {
                         <button
                           onClick={() => removeItem(item.id)}
                           className="text-gray-400 hover:text-red-600 transition-colors p-2"
-                          style={{ color: '#B87333' }}
+                          style={{ color: '#B8860B' }}
                         >
                           <svg className="w-5 h-5 lg:w-6 lg:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
@@ -177,7 +177,7 @@ export default function CartPage() {
                       <>
                         {/* Special Deal Display */}
                         <div className="bg-gradient-to-r p-3 lg:p-4 rounded-xl mb-4"
-                             style={{ backgroundColor: '#B87333', color: '#F8FBFF' }}>
+                             style={{ backgroundColor: '#B8860B', color: '#F8FBFF' }}>
                           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-2 sm:space-y-0">
                             <div>
                               <div className="font-bold text-base lg:text-lg">🎉 Special Deal!</div>
@@ -280,7 +280,7 @@ export default function CartPage() {
                         }
                       }}
                       className="w-full text-white px-4 lg:px-6 py-3 lg:py-4 rounded-full font-semibold text-base lg:text-lg hover:opacity-90 transition-colors text-center"
-                      style={{ backgroundColor: '#1E3A8A' }}
+                      style={{ backgroundColor: '#4A6B8A' }}
                     >
                       Proceed to Checkout
                     </button>
@@ -289,17 +289,17 @@ export default function CartPage() {
                       href="/product"
                       className="w-full border-2 px-4 lg:px-6 py-3 lg:py-4 rounded-full font-semibold text-base lg:text-lg hover:opacity-90 transition-colors text-center block"
                       style={{ 
-                        borderColor: '#B87333',
-                        color: '#B87333',
+                        borderColor: '#B8860B',
+                        color: '#B8860B',
                         backgroundColor: 'transparent'
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = '#B87333';
+                        e.currentTarget.style.backgroundColor = '#B8860B';
                         e.currentTarget.style.color = '#F8FBFF';
                       }}
                       onMouseLeave={(e) => {
                         e.currentTarget.style.backgroundColor = 'transparent';
-                        e.currentTarget.style.color = '#B87333';
+                        e.currentTarget.style.color = '#B8860B';
                       }}
                     >
                       Continue Shopping

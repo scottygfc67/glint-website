@@ -137,7 +137,7 @@ export default function FAQPage() {
           <div className="space-y-8 lg:space-y-12">
             {faqs.map((category, categoryIndex) => (
               <div key={categoryIndex} className="bg-white rounded-2xl p-4 lg:p-8 shadow-lg border border-gray-100">
-                <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-6" style={{ color: '#1E3A8A' }}>
+                <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-6" style={{ color: '#4A6B8A' }}>
                   {category.category}
                 </h2>
                 <div className="space-y-4">
@@ -148,7 +148,7 @@ export default function FAQPage() {
                         <button
                           onClick={() => toggleItem(categoryIndex, faqIndex)}
                           className="w-full px-4 lg:px-6 py-4 text-left bg-white hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
-                          style={{ '--tw-ring-color': '#1E3A8A' } as React.CSSProperties}
+                          style={{ '--tw-ring-color': '#4A6B8A' } as React.CSSProperties}
                         >
                           <div className="flex items-center justify-between">
                             <h3 className="text-base lg:text-lg font-semibold text-gray-900 pr-4">
@@ -193,7 +193,7 @@ export default function FAQPage() {
                 <a 
                   href="/contact" 
                   className="inline-flex items-center text-white px-6 lg:px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-colors"
-                  style={{ backgroundColor: '#1E3A8A' }}
+                  style={{ backgroundColor: '#4A6B8A' }}
                 >
                   Contact Support
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -204,17 +204,17 @@ export default function FAQPage() {
                   href="mailto:support@glint.com" 
                   className="inline-flex items-center border-2 px-6 lg:px-8 py-3 rounded-full font-semibold hover:opacity-90 transition-colors"
                   style={{ 
-                    borderColor: '#B87333',
-                    color: '#B87333',
+                    borderColor: '#B8860B',
+                    color: '#B8860B',
                     backgroundColor: 'transparent'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = '#B87333';
+                    e.currentTarget.style.backgroundColor = '#B8860B';
                     e.currentTarget.style.color = '#F8FBFF';
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor = 'transparent';
-                    e.currentTarget.style.color = '#B87333';
+                    e.currentTarget.style.color = '#B8860B';
                   }}
                 >
                   Email Us

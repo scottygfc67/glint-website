@@ -89,7 +89,7 @@ export default function GlassNav() {
             <Link
               href="/api/checkout?qty=1"
               className="rounded-full px-6 py-3 text-white text-sm font-semibold transition-colors focus-visible:outline-none hover:opacity-90"
-              style={{ backgroundColor: '#1E3A8A' }}
+              style={{ backgroundColor: '#4A6B8A' }}
             >
               Buy Now
             </Link>
@@ -150,12 +150,6 @@ export default function GlassNav() {
                 Contact
               </Link>
               
-              {/* Currency Selector in Mobile Menu */}
-              <div className="px-3 py-2">
-                <div className="text-sm font-medium text-[var(--ink)]/60 mb-2">Currency & Location</div>
-                <LocationDropdown isMobile={false} className="w-full" />
-              </div>
-              
               <Link
                 href="/cart"
                 className="block px-3 py-2 text-base font-medium text-[var(--ink)]/80 hover:text-[var(--ink)]"
@@ -166,7 +160,7 @@ export default function GlassNav() {
               <Link
                 href="/api/checkout?qty=1"
                 className="block px-3 py-2 text-base font-medium text-white rounded-full mx-3 text-center hover:opacity-90"
-                style={{ backgroundColor: '#1E3A8A' }}
+                style={{ backgroundColor: '#4A6B8A' }}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Buy Now

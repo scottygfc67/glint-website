@@ -64,7 +64,7 @@ export default function AddToCart({ variantGid, title, price, currencyCode, imag
                 ? "bg-green-600 text-white"
                 : "text-white hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed"
             }`}
-            style={!added ? { backgroundColor: '#1E3A8A' } : {}}
+            style={!added ? { backgroundColor: '#4A6B8A' } : {}}
           >
             {loading ? "Adding to Cart..." : added ? "✓ Added to Cart!" : "Add to Cart"}
           </button>
@@ -72,17 +72,17 @@ export default function AddToCart({ variantGid, title, price, currencyCode, imag
             href={`/api/checkout?qty=${quantity}`}
             className="flex-1 border-2 px-8 py-4 rounded-lg font-semibold text-lg transition-all text-center hover:opacity-90"
             style={{ 
-              borderColor: '#B87333',
-              color: '#B87333',
+              borderColor: '#B8860B',
+              color: '#B8860B',
               backgroundColor: 'transparent'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#B87333';
+              e.currentTarget.style.backgroundColor = '#B8860B';
               e.currentTarget.style.color = '#F8FBFF';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = 'transparent';
-              e.currentTarget.style.color = '#B87333';
+              e.currentTarget.style.color = '#B8860B';
             }}
           >
             Buy Now
