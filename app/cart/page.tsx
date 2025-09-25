@@ -175,20 +175,16 @@ export default function CartPage() {
                   <div className="space-y-4">
                     {getTotalItems() >= 2 ? (
                       <>
-                        {/* Special Deal Display */}
-                        <div className="bg-gradient-to-r p-3 lg:p-4 rounded-xl mb-4"
-                             style={{ backgroundColor: '#B8860B', color: '#F8FBFF' }}>
-                          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between space-y-2 sm:space-y-0">
-                            <div>
-                              <div className="font-bold text-base lg:text-lg">🎉 Special Deal!</div>
-                              <div className="text-xs lg:text-sm">2+ Serums + Free Worldwide Shipping</div>
-                            </div>
-                            <div className="text-right">
-                              <div className="text-xl lg:text-2xl font-bold">{location ? convertPrice(29.99) : "£29.99"}</div>
-                              <div className="text-xs lg:text-sm line-through opacity-75">
+                        {/* Special Deal Display - Clean */}
+                        <div className="mb-4 p-3 bg-gray-50 rounded-lg border border-gray-200">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center space-x-2">
+                              <span className="text-lg font-bold text-gray-900">{location ? convertPrice(29.99) : "£29.99"}</span>
+                              <span className="text-sm text-gray-500 line-through">
                                 {location ? convertPrice(items.reduce((total, item) => total + (item.price * item.quantity), 0)) : `£${items.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2)}`}
-                              </div>
+                              </span>
                             </div>
+                            <span className="text-sm text-green-600 font-medium">+ free shipping</span>
                           </div>
                         </div>
                         

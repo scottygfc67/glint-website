@@ -30,13 +30,12 @@ export default function Hero({ product }: HeroProps) {
     <section className="relative min-h-screen flex items-center -mt-20 pt-20 sm:pt-36">
       {/* Hero Background Image */}
       <div
-        className="absolute inset-0 h-full w-full bg-cover bg-no-repeat"
+        className="absolute inset-0 h-full w-full bg-cover bg-no-repeat bg-center sm:bg-[center_20%_0px]"
         style={{
-          backgroundImage: "url('/hero.png')",
-          backgroundPosition: "center 20% 10px"
+          backgroundImage: "url('/hero.png')"
         }}
       />
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/70"></div>
       
       {/* Iridescent Pearl Ring - subtle overlay */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(closest-side,rgba(220,232,255,.08),transparent_60%)]"></div>
