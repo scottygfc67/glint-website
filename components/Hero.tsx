@@ -41,8 +41,8 @@ export default function Hero({ product }: HeroProps) {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(closest-side,rgba(220,232,255,.08),transparent_60%)]"></div>
       
       {/* Hero Content - Centered */}
-      <div className="relative mx-auto max-w-4xl px-4 py-12 sm:py-20 text-center">
-        <div className="space-y-6 sm:space-y-8">
+      <div className="relative mx-auto max-w-4xl px-4 pt-32 pb-12 sm:py-20 text-center">
+        <div className="space-y-4 sm:space-y-8">
           <div className="space-y-4 sm:space-y-6">
             <span className="inline-flex items-center px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold tracking-wide uppercase text-white border border-gray-600"
                   style={{ backgroundColor: '#4A6B8A' }}>
