@@ -33,7 +33,7 @@ export default function Hero({ product }: HeroProps) {
         className="absolute inset-0 h-full w-full bg-cover bg-no-repeat"
         style={{
           backgroundImage: "url('/hero.png')",
-          backgroundPosition: "center 20%"
+          backgroundPosition: "center 20% 10px"
         }}
       />
       <div className="absolute inset-0 bg-black/50"></div>
