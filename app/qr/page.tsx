@@ -24,11 +24,11 @@ export default function QRPage() {
   const faqs = [
     {
       question: "How to find your review screenshot?",
-      answer: "Go to your purchase history in TikTok Shop, find your GLINT order, and take a screenshot of your 5-star review."
+      answer: "Go to where you purchased GLINT (TikTok Shop, our website, etc.), find your order, and take a screenshot of your 5-star review."
     },
     {
       question: "How long does approval take?",
-      answer: "Your review is verified instantly! You'll get your discount code immediately after uploading."
+      answer: "Your review is verified instantly! You'll get your 30% discount code immediately after uploading."
     },
     {
       question: "What if my review is private?",
@@ -36,11 +36,11 @@ export default function QRPage() {
     },
     {
       question: "Can I use this code multiple times?",
-      answer: "This is a one-time use code per customer. Each review gets you one discount code."
+      answer: "This is a one-time use code per customer. Each 5-star review gets you one discount code."
     },
     {
       question: "What if I don't have TikTok?",
-      answer: "You can leave a review on our website or any other platform where you purchased GLINT, then upload a screenshot here."
+      answer: "You can leave a 5-star review on our website or any other platform where you purchased GLINT, then upload a screenshot here."
     }
   ];
 
@@ -75,11 +75,11 @@ export default function QRPage() {
                 </div>
                 
                 <h1 className="text-2xl font-bold text-gray-900">
-                  Post your review on TikTok Shop
+                  Get Exclusive 30% Off Your Next Order
                 </h1>
                 
                 <p className="text-gray-600 text-lg leading-relaxed">
-                  Thanks for trying GLINT. Leave an honest TikTok review of your purchase, upload a quick screenshot here, and we&apos;ll instantly unlock a 30% thank-you code.
+                  Love your GLINT results? Leave a 5-star review and get an exclusive 30% discount code for your next purchase. Upload your review screenshot to unlock your savings instantly!
                 </p>
               </div>
 
@@ -132,23 +132,23 @@ export default function QRPage() {
 
             {/* Instructions */}
             <div className="bg-blue-50 rounded-xl p-6">
-              <h3 className="font-semibold text-gray-900 mb-4">How to find your review:</h3>
+              <h3 className="font-semibold text-gray-900 mb-4">How to leave your 5-star review:</h3>
               <ol className="space-y-3 text-sm text-gray-700">
                 <li className="flex items-start">
                   <span className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs font-medium text-blue-600 mr-3">1</span>
-                  <span>Open TikTok Shop on your phone</span>
+                  <span>Go to where you purchased GLINT (TikTok Shop, our website, etc.)</span>
                 </li>
                 <li className="flex items-start">
                   <span className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs font-medium text-blue-600 mr-3">2</span>
-                  <span>Go to &quot;My Orders&quot; or search &quot;GLINT Eye Glow Serum&quot;</span>
+                  <span>Find your GLINT Eye Glow Serum order</span>
                 </li>
                 <li className="flex items-start">
                   <span className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs font-medium text-blue-600 mr-3">3</span>
-                  <span>Find your purchase and tap &quot;Write Review&quot;</span>
+                  <span>Write a review and give it 5 stars</span>
                 </li>
                 <li className="flex items-start">
                   <span className="flex-shrink-0 w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center text-xs font-medium text-blue-600 mr-3">4</span>
-                  <span>Leave an honest review with a star rating</span>
+                  <span>Take a screenshot of your 5-star review</span>
                 </li>
               </ol>
             </div>
@@ -159,7 +159,7 @@ export default function QRPage() {
                 onClick={() => setStep(2)}
                 className="w-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold py-4 px-6 rounded-lg text-lg shadow-lg hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
               >
-                I&apos;ve Posted My Review →
+                I&apos;ve Left My 5-Star Review →
               </button>
             </div>
 
@@ -200,10 +200,10 @@ export default function QRPage() {
           <div className="space-y-8">
             <div className="text-center space-y-4">
               <h1 className="text-2xl font-bold text-gray-900">
-                Upload Your Review Screenshot
+                Upload Your 5-Star Review Screenshot
               </h1>
               <p className="text-gray-600 text-lg">
-                Show us your 5-star review to get your discount code!
+                Show us your 5-star review to unlock your exclusive 30% discount code!
               </p>
             </div>
 

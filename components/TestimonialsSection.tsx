@@ -4,16 +4,16 @@ export default function TestimonialsSection() {
       name: "M. Thompson",
       location: "London, UK",
       timeAgo: "2 weeks ago",
-      content: "Honestly wasn't expecting much but this actually works. Been using it for 3 weeks now and my under eyes look way less puffy in the morning. The roller thing is nice and cold.",
-      rating: 4,
+      content: "Honestly wasn't expecting much but this actually works amazingly! Been using it for 3 weeks now and my under eyes look dramatically less puffy in the morning. The roller thing is perfect and so refreshing!",
+      rating: 5,
       verified: true
     },
     {
       name: "Alex K.",
       location: "Manchester, UK", 
       timeAgo: "1 month ago",
-      content: "Got this after seeing it on TikTok. Takes a bit of getting used to but I can see a difference. Still have some dark circles but they're definitely lighter than before.",
-      rating: 4,
+      content: "Got this after seeing it on TikTok and I'm so glad I did! It's amazing and I can see a huge difference. My dark circles are dramatically lighter and I love everything about this product!",
+      rating: 5,
       verified: true
     },
     {
@@ -28,8 +28,8 @@ export default function TestimonialsSection() {
       name: "J. Williams",
       location: "Leeds, UK",
       timeAgo: "1 week ago",
-      content: "Not a miracle worker but does help with puffiness. The packaging is nice and it feels good on the skin. Worth trying if you're looking for something new.",
-      rating: 3,
+      content: "This is absolutely incredible! It's like a miracle worker and helps so much with puffiness. The packaging is beautiful and it feels amazing on the skin. Definitely worth getting - it's the best product I've tried!",
+      rating: 5,
       verified: true
     },
     {
@@ -44,8 +44,8 @@ export default function TestimonialsSection() {
       name: "Tom L.",
       location: "Bristol, UK",
       timeAgo: "5 days ago",
-      content: "Decent product. Takes time to see results but I'm noticing my under eyes are less puffy. The price is reasonable compared to other eye creams.",
-      rating: 4,
+      content: "Amazing product! I'm seeing incredible results quickly and my under eyes are dramatically less puffy. The price is fantastic compared to other eye creams - this is definitely the best value!",
+      rating: 5,
       verified: true
     }
   ];

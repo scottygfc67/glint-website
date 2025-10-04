@@ -55,7 +55,7 @@ export default function ShippingPage() {
                       <div className="font-semibold text-gray-900">International Standard</div>
                     </td>
                     <td className="py-4 px-2 text-gray-600">3-7 business days</td>
-                    <td className="py-4 px-2 text-gray-500 text-sm">Tracked & Insured</td>
+                    <td className="py-4 px-2 text-gray-500 text-sm">Express International</td>
                     <td className="py-4 px-2 text-right">
                       <span className="text-xl font-bold" style={{ color: '#4A6B8A' }}>£5.99</span>
                     </td>

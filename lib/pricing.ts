@@ -103,11 +103,13 @@ export function roundPrice(price: number, currency: string): number {
 export function getCleanPrice(price: number, currency: string): number {
   const rounded = roundPrice(price, currency);
   
-  // For certain currencies, round to nice numbers
-  if (currency === 'USD' || currency === 'EUR' || currency === 'GBP') {
-    // Round to nearest 0.99 for psychological pricing
-    return Math.floor(rounded) + 0.99;
+  // For currencies that support decimals, round DOWN to .99 for psychological pricing
+  if (currency === 'JPY' || currency === 'KRW' || currency === 'VND' || currency === 'IDR') {
+    // Integer currencies - round down to nearest whole number
+    return Math.floor(rounded);
+  } else {
+    // All other currencies - round DOWN to the .99 below
+    const wholeNumber = Math.floor(rounded);
+    return wholeNumber - 0.01; // Round DOWN to .99 (e.g., 56.38 becomes 55.99)
   }
-  
-  return rounded;
 }

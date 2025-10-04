@@ -39,7 +39,7 @@ export type ReviewsPayload = {
 
 // Dummy data
 const dummyData: ReviewsPayload = {
-  average: 4.8,
+  average: 4.7,
   total: 2847,
   histogram: [
     { stars: 5, count: 1980 },
@@ -85,19 +85,23 @@ const dummyData: ReviewsPayload = {
       verified: true,
       concerns: ["Dark circles"],
       helpfulVotes: 18,
-      notHelpfulVotes: 0
+      notHelpfulVotes: 0,
+      brandReply: {
+        body: "Thank you Sarah! We're so happy to hear that GLINT has become part of your daily routine. The roller applicator was designed specifically to provide that cooling sensation and gentle massage effect. Keep up the great results!",
+        repliedAt: "2024-01-13T08:30:00Z"
+      }
     },
     {
       id: "3",
-      rating: 4,
-      title: "Really good results",
-      body: "I was sceptical at first but this actually works. My puffiness has reduced significantly and the product feels lovely on the skin. Only downside is I wish the bottle was bigger!",
+      rating: 5,
+      title: "Absolutely amazing results!",
+      body: "I was sceptical at first but this actually works incredibly well! My puffiness has reduced significantly and the product feels lovely on the skin. The cooling roller is perfect and I love everything about it!",
       createdAt: "2024-01-10T16:45:00Z",
       reviewer: { name: "Lisa K.", location: "Birmingham, UK", ageRange: "25-34" },
       verified: true,
       concerns: ["Puffiness", "Dryness"],
       helpfulVotes: 12,
-      notHelpfulVotes: 2
+      notHelpfulVotes: 0
     },
     {
       id: "4",
@@ -109,13 +113,17 @@ const dummyData: ReviewsPayload = {
       verified: true,
       concerns: ["Dark circles"],
       helpfulVotes: 31,
-      notHelpfulVotes: 1
+      notHelpfulVotes: 1,
+      brandReply: {
+        body: "Jessica, this is amazing to hear! We love that your friends are noticing the difference too. The cooling roller with our clinically-proven actives is designed to target dark circles effectively. Thank you for sharing your experience!",
+        repliedAt: "2024-01-09T10:45:00Z"
+      }
     },
     {
       id: "5",
-      rating: 4,
-      title: "Great product, fast delivery",
-      body: "Love the cooling effect and how it makes my skin feel. Delivery was super quick and packaging was lovely. Will definitely be ordering again when I run out.",
+      rating: 5,
+      title: "Perfect product with amazing delivery!",
+      body: "I absolutely love the cooling effect and how it makes my skin feel. Delivery was super quick and packaging was lovely. This product is incredible and I will definitely be ordering again when I run out!",
       createdAt: "2024-01-05T09:15:00Z",
       reviewer: { name: "Amy T.", location: "Edinburgh, UK", ageRange: "35-44" },
       verified: true,
@@ -133,19 +141,23 @@ const dummyData: ReviewsPayload = {
       verified: true,
       concerns: ["Dark circles", "Puffiness"],
       helpfulVotes: 19,
-      notHelpfulVotes: 0
+      notHelpfulVotes: 0,
+      brandReply: {
+        body: "Rebecca, we're thrilled you're seeing such quick results! Our caffeine and peptide complex work together to target both dark circles and puffiness. The cooling roller adds that extra soothing touch. Keep up the great work!",
+        repliedAt: "2024-01-04T09:20:00Z"
+      }
     },
     {
       id: "7",
-      rating: 3,
-      title: "Decent but not amazing",
-      body: "It's okay, I can see some improvement but not as dramatic as I was hoping. The cooling effect is nice though and it does feel good on the skin. Maybe I need to use it longer.",
+      rating: 5,
+      title: "Absolutely incredible results!",
+      body: "This product is amazing! I can see dramatic improvement and it's exactly what I was hoping for. The cooling effect is fantastic and it feels incredible on the skin. I'm so glad I found this!",
       createdAt: "2024-01-01T15:45:00Z",
       reviewer: { name: "Michelle D.", location: "Leeds, UK", ageRange: "45-54" },
       verified: true,
       concerns: ["Dark circles"],
       helpfulVotes: 5,
-      notHelpfulVotes: 3
+      notHelpfulVotes: 0
     },
     {
       id: "8",
@@ -157,19 +169,23 @@ const dummyData: ReviewsPayload = {
       verified: true,
       concerns: ["Dark circles", "Dryness"],
       helpfulVotes: 15,
-      notHelpfulVotes: 0
+      notHelpfulVotes: 0,
+      brandReply: {
+        body: "Charlotte, thank you for sharing this! We're so pleased that GLINT works well for sensitive skin. Our formula is fragrance-free and designed to be gentle while still delivering results. The hyaluronic acid helps with dryness too!",
+        repliedAt: "2023-12-29T11:30:00Z"
+      }
     },
     {
       id: "9",
-      rating: 4,
-      title: "Really impressed",
-      body: "This is a lovely product. The texture is perfect and it absorbs quickly. I can see my under-eyes looking brighter and less tired. The packaging is beautiful too.",
+      rating: 5,
+      title: "Completely blown away!",
+      body: "This is an absolutely incredible product! The texture is perfect and it absorbs quickly. I can see my under-eyes looking dramatically brighter and less tired. The packaging is beautiful too and I love everything about it!",
       createdAt: "2023-12-25T10:30:00Z",
       reviewer: { name: "Olivia P.", location: "Newcastle, UK", ageRange: "18-24" },
       verified: true,
       concerns: ["Dark circles"],
       helpfulVotes: 11,
-      notHelpfulVotes: 1
+      notHelpfulVotes: 0
     },
     {
       id: "10",
@@ -181,7 +197,11 @@ const dummyData: ReviewsPayload = {
       verified: true,
       concerns: ["Dark circles", "Puffiness"],
       helpfulVotes: 27,
-      notHelpfulVotes: 0
+      notHelpfulVotes: 0,
+      brandReply: {
+        body: "Sophie, this means the world to us! We're so happy that GLINT has become your go-to eye product. The fact that your makeup sits better now shows how well our formula works with other products. Thank you for the recommendation!",
+        repliedAt: "2023-12-23T16:45:00Z"
+      }
     }
   ]
 };

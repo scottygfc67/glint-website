@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { getCurrencyAbbreviation } from 'country-currency-map';
+import { getCleanPrice } from '@/lib/pricing';
 
 interface LocationData {
   country: string;
@@ -212,13 +213,13 @@ export function LocationProvider({ children }: { children: ReactNode }) {
     locale: 'en-GB',
   };
 
-  const convertPrice = (priceInGBP: number): string => {
+  const   convertPrice = (priceInGBP: number): string => {
     if (!location) return `£${priceInGBP.toFixed(2)}`;
     
     const convertedPrice = priceInGBP * location.exchangeRate;
-    const roundedPrice = Math.round(convertedPrice * 100) / 100; // Round to 2 decimal places
+    const cleanPrice = getCleanPrice(convertedPrice, location.currency); // Apply .99 rounding
     
-    return `${location.currencySymbol}${roundedPrice.toFixed(2)}`;
+    return `${location.currencySymbol}${cleanPrice.toFixed(2)}`;
   };
 
   // Detect user location
