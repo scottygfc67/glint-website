@@ -1,4 +1,20 @@
-import { BAItem, Highlight, FAQItem, Step } from '@/components/BeforeAfterSection';
+import { BAItem } from '@/components/BeforeAfterSection';
+
+// Define local types
+export type Step = {
+  title: string;
+  body: string;
+};
+
+export type Highlight = {
+  name: string;
+  benefit: string;
+};
+
+export type FAQItem = {
+  q: string;
+  a: string;
+};
 
 // Before & After Data
 export const beforeAfterItems: BAItem[] = [

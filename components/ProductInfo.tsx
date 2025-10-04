@@ -30,7 +30,7 @@ export default function ProductInfo({}: ProductInfoProps) {
       case 'product-details':
         return (
           <div className="space-y-4 text-gray-600">
-            {data.sections.map((section, index) => (
+            {(data as typeof productInfoData['product-details']).sections.map((section, index) => (
               <div key={index}>
                 <h4 className="font-semibold text-gray-900 mb-2">{section.label}</h4>
                 <p>{section.text}</p>
@@ -42,7 +42,7 @@ export default function ProductInfo({}: ProductInfoProps) {
       case 'key-benefits':
         return (
           <ul className="space-y-3 text-gray-600">
-            {data.benefits.map((benefit, index) => (
+            {(data as typeof productInfoData['key-benefits']).benefits.map((benefit, index) => (
               <li key={index} className="flex items-start">
                 <svg className="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style={{ color: '#B8860B' }} fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -57,7 +57,7 @@ export default function ProductInfo({}: ProductInfoProps) {
         return (
           <div className="space-y-4 text-gray-600">
             <div className="grid md:grid-cols-2 gap-4">
-              {data.ingredients.map((ingredient, index) => (
+              {(data as typeof productInfoData['key-ingredients']).ingredients.map((ingredient, index) => (
                 <div key={index}>
                   <h4 className="font-semibold text-gray-900 mb-2">{ingredient.name}</h4>
                   <p>{ingredient.description}</p>
@@ -66,7 +66,7 @@ export default function ProductInfo({}: ProductInfoProps) {
             </div>
             <div className="pt-4 border-t border-gray-200">
               <h4 className="font-semibold text-gray-900 mb-2">Also contains:</h4>
-              <p>{data.additional}</p>
+              <p>{(data as typeof productInfoData['key-ingredients']).additional}</p>
             </div>
           </div>
         );
@@ -74,7 +74,7 @@ export default function ProductInfo({}: ProductInfoProps) {
       case 'how-to-use':
         return (
           <ol className="space-y-3 text-gray-600">
-            {data.steps.map((step, index) => (
+            {(data as typeof productInfoData['how-to-use']).steps.map((step, index) => (
               <li key={index} className="flex items-start">
                 <span className="flex-shrink-0 w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center text-xs font-medium text-gray-600 mr-3">{index + 1}</span>
                 <span>{step}</span>
@@ -87,9 +87,9 @@ export default function ProductInfo({}: ProductInfoProps) {
         return (
           <div className="space-y-4 text-gray-600">
             <div className="bg-blue-50 p-6 rounded-lg">
-              <h4 className="font-semibold text-gray-900 mb-4">{data.study.description}</h4>
+              <h4 className="font-semibold text-gray-900 mb-4">{(data as typeof productInfoData['clinicals']).study.description}</h4>
               <ul className="space-y-2">
-                {data.study.results.map((result, index) => (
+                {(data as typeof productInfoData['clinicals']).study.results.map((result, index) => (
                   <li key={index} className="flex items-center">
                     <svg className="w-4 h-4 mr-2" style={{ color: '#B8860B' }} fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -99,7 +99,7 @@ export default function ProductInfo({}: ProductInfoProps) {
                 ))}
               </ul>
             </div>
-            <p className="text-sm text-gray-500">{data.study.disclaimer}</p>
+            <p className="text-sm text-gray-500">{(data as typeof productInfoData['clinicals']).study.disclaimer}</p>
           </div>
         );
 
@@ -109,7 +109,7 @@ export default function ProductInfo({}: ProductInfoProps) {
             <div>
               <h4 className="font-semibold text-gray-900 mb-2">Shipping</h4>
               <ul className="space-y-1">
-                {data.shipping.map((item, index) => (
+                {(data as typeof productInfoData['shipping-returns']).shipping.map((item, index) => (
                   <li key={index}>• {item}</li>
                 ))}
               </ul>
@@ -117,7 +117,7 @@ export default function ProductInfo({}: ProductInfoProps) {
             <div>
               <h4 className="font-semibold text-gray-900 mb-2">Returns</h4>
               <ul className="space-y-1">
-                {data.returns.map((item, index) => (
+                {(data as typeof productInfoData['shipping-returns']).returns.map((item, index) => (
                   <li key={index}>• {item}</li>
                 ))}
               </ul>
