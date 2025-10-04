@@ -103,6 +103,11 @@ export function roundPrice(price: number, currency: string): number {
 export function getCleanPrice(price: number, currency: string): number {
   const rounded = roundPrice(price, currency);
   
+  // Special case: UK base prices should never be rounded
+  if (currency === 'GBP' && (price === BASE_PRICE_GBP || price === SPECIAL_DEAL_PRICE_GBP)) {
+    return price; // Always return exact price for UK base prices
+  }
+  
   // For currencies that support decimals, round DOWN to .99 for psychological pricing
   if (currency === 'JPY' || currency === 'KRW' || currency === 'VND' || currency === 'IDR') {
     // Integer currencies - round down to nearest whole number

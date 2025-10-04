@@ -9,6 +9,8 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import OverviewContent from "@/components/product/OverviewContent";
 import KeyBenefitsContent from "@/components/product/KeyBenefitsContent";
 import { howItWorksSteps, faqItems } from "@/lib/productData";
+import { useLocation } from "@/contexts/LocationContext";
+import { BASE_PRICE_GBP } from "@/lib/pricing";
 
 interface ProductPageClientProps {
   product: {
@@ -28,13 +30,17 @@ interface ProductPageClientProps {
 
 export default function ProductPageClient({ product }: ProductPageClientProps) {
   const [selectedQuantity, setSelectedQuantity] = useState(2);
+  const { location, convertPrice } = useLocation();
   
   const p = product;
   const variant = p.variants.nodes[0];
-  const price = new Intl.NumberFormat("en", {
-    style: "currency",
-    currency: variant.price.currencyCode,
-  }).format(Number(variant.price.amount));
+  
+  // Use location-based pricing instead of Shopify's pricing
+  const localizedPrice = location ? convertPrice(BASE_PRICE_GBP) : `£${BASE_PRICE_GBP.toFixed(2)}`;
+  
+  // For compare at price, we'll use a higher price (e.g., £26.99)
+  const compareAtPriceGBP = BASE_PRICE_GBP * 1.35; // ~35% higher
+  const localizedComparePrice = location ? convertPrice(compareAtPriceGBP) : `£${compareAtPriceGBP.toFixed(2)}`;
 
   return (
     <>
@@ -71,20 +77,13 @@ export default function ProductPageClient({ product }: ProductPageClientProps) {
 
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <span className="text-4xl font-bold text-gray-900">{price}</span>
-                  {p.variants.nodes[0].compareAtPrice && (
-                    <>
-                      <span className="text-2xl text-gray-400 line-through">
-                        {new Intl.NumberFormat("en", {
-                          style: "currency",
-                          currency: p.variants.nodes[0].compareAtPrice!.currencyCode,
-                        }).format(Number(p.variants.nodes[0].compareAtPrice!.amount))}
-                      </span>
-                      <span className="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">
-                        Save {Math.round((1 - Number(p.variants.nodes[0].price.amount) / Number(p.variants.nodes[0].compareAtPrice!.amount)) * 100)}%
-                      </span>
-                    </>
-                  )}
+                  <span className="text-4xl font-bold text-gray-900">{localizedPrice}</span>
+                  <span className="text-2xl text-gray-400 line-through">
+                    {localizedComparePrice}
+                  </span>
+                  <span className="bg-blue-100 text-blue-800 text-sm font-medium px-2.5 py-0.5 rounded-full">
+                    Save 26%
+                  </span>
                 </div>
                 <p className="text-lg text-gray-600">{p.description}</p>
               </div>
@@ -96,8 +95,8 @@ export default function ProductPageClient({ product }: ProductPageClientProps) {
                 <AddToCart 
                   variantGid={variant.id}
                   title={p.title}
-                  price={Number(variant.price.amount)}
-                  currencyCode={variant.price.currencyCode}
+                  price={BASE_PRICE_GBP}
+                  currencyCode={location?.currency || 'GBP'}
                   image={p.featuredImage?.url}
                   quantity={selectedQuantity}
                 />

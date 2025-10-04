@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { useLocation } from "@/contexts/LocationContext";
+import { BASE_PRICE_GBP, SPECIAL_DEAL_PRICE_GBP } from "@/lib/pricing";
 
 interface QuantitySelectorProps {
   onQuantityChange: (quantity: number) => void;
@@ -8,11 +10,18 @@ interface QuantitySelectorProps {
 
 export default function QuantitySelector({ onQuantityChange }: QuantitySelectorProps) {
   const [selectedQuantity, setSelectedQuantity] = useState(2); // Default to 2 bottles (best value)
+  const { location, convertPrice } = useLocation();
 
   const handleQuantityChange = (quantity: number) => {
     setSelectedQuantity(quantity);
     onQuantityChange(quantity);
   };
+
+  // Calculate dynamic pricing
+  const singlePrice = location ? convertPrice(BASE_PRICE_GBP) : `£${BASE_PRICE_GBP.toFixed(2)}`;
+  const twoBottlePrice = location ? convertPrice(SPECIAL_DEAL_PRICE_GBP) : `£${SPECIAL_DEAL_PRICE_GBP.toFixed(2)}`;
+  const twoBottleOriginalPrice = location ? convertPrice(BASE_PRICE_GBP * 2) : `£${(BASE_PRICE_GBP * 2).toFixed(2)}`;
+  const threeBottlePrice = location ? convertPrice(BASE_PRICE_GBP * 3 * 0.8) : `£${(BASE_PRICE_GBP * 3 * 0.8).toFixed(2)}`;
 
   return (
     <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 border border-white/20 shadow-lg">
@@ -41,7 +50,7 @@ export default function QuantitySelector({ onQuantityChange }: QuantitySelectorP
             </div>
           </div>
           <div className="text-right">
-            <div className="font-bold text-gray-900">£19.99</div>
+            <div className="font-bold text-gray-900">{singlePrice}</div>
             <div className="text-sm text-gray-500">per bottle</div>
           </div>
         </div>
@@ -74,8 +83,8 @@ export default function QuantitySelector({ onQuantityChange }: QuantitySelectorP
           </div>
           <div className="text-right">
             <div className="flex items-center space-x-2">
-              <span className="text-sm text-gray-400 line-through">£39.99</span>
-              <span className="text-2xl font-bold text-gray-900">£29.99</span>
+              <span className="text-sm text-gray-400 line-through">{twoBottleOriginalPrice}</span>
+              <span className="text-2xl font-bold text-gray-900">{twoBottlePrice}</span>
             </div>
             <div className="text-sm text-gray-500">total</div>
           </div>
@@ -104,7 +113,7 @@ export default function QuantitySelector({ onQuantityChange }: QuantitySelectorP
             </div>
           </div>
           <div className="text-right">
-            <div className="font-bold text-gray-900">£60.00</div>
+            <div className="font-bold text-gray-900">{threeBottlePrice}</div>
             <div className="text-sm text-gray-500">total</div>
           </div>
         </div>
