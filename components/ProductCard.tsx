@@ -31,7 +31,7 @@ export default function ProductCard({ product }: ProductCardProps) {
   const { location, convertPrice } = useLocation();
   
   const title = product?.title || "GLINT Eye Glow Serum";
-  const description = product?.description || "Cooling rollerball brightens, hydrates and depuffs. 8 ml / 0.27 fl oz.";
+  const description = product?.description || "Cooling rollerball brightens, hydrates and depuffs. 10 ml / 0.33 fl oz.";
   const imageUrl = product?.featuredImage?.url || "/hero.png";
   const imageAlt = product?.featuredImage?.altText || "GLINT serum";
   
