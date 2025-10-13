@@ -162,8 +162,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
-                      <p className="text-gray-700 text-lg">support@glint.com</p>
-                      <p className="text-gray-700 text-lg">returns@glint.com</p>
+                      <p className="text-gray-700 text-lg">hello@glinteye.shop</p>
+                      <p className="text-gray-700 text-lg">returns@glinteye.shop</p>
                     </div>
                   </div>
 
