@@ -80,6 +80,15 @@ const ADMIN_PRODUCT_QUERY = /* GraphQL */ `
       featuredMedia {
         ... on MediaImage {
           image { url }
+          preview { image { url } }
+        }
+      }
+      media(first: 1) {
+        nodes {
+          ... on MediaImage {
+            image { url }
+            preview { image { url } }
+          }
         }
       }
       variants(first: 1) {
@@ -101,7 +110,8 @@ export async function getProduct(productGid: string): Promise<ProductForFrontend
     product: {
       title: string;
       description: string;
-      featuredMedia?: { image?: { url: string } } | null;
+      featuredMedia?: { image?: { url: string }; preview?: { image?: { url: string } } } | null;
+      media?: { nodes: Array<{ image?: { url: string }; preview?: { image?: { url: string } } }> } | null;
       variants: { nodes: { id: string; title: string; price: string; compareAtPrice?: string | null }[] };
     } | null;
   }>(ADMIN_PRODUCT_QUERY, { id: productGid });
@@ -111,12 +121,16 @@ export async function getProduct(productGid: string): Promise<ProductForFrontend
   const { shop, product } = data;
   const currencyCode = shop.currencyCode;
 
+  const featuredMediaUrl =
+    product.featuredMedia?.image?.url ?? product.featuredMedia?.preview?.image?.url;
+  const firstMediaUrl =
+    product.media?.nodes?.[0]?.image?.url ?? product.media?.nodes?.[0]?.preview?.image?.url;
+  const imageUrl = featuredMediaUrl ?? firstMediaUrl;
+
   return {
     title: product.title,
     description: product.description,
-    featuredImage: product.featuredMedia?.image?.url
-      ? { url: product.featuredMedia.image.url, altText: null }
-      : undefined,
+    featuredImage: imageUrl ? { url: imageUrl, altText: null } : undefined,
     variants: {
       nodes: product.variants.nodes.map((v) => ({
         id: v.id,
