@@ -26,7 +26,7 @@ export default function Hero({ product }: HeroProps) {
         <style jsx>{`
           @media (max-width: 767px) {
             .hero-image {
-              object-position: calc(50% - 200px) 50%;
+              object-position: calc(50% - 200px) calc(50% + 150px);
             }
           }
         `}</style>
