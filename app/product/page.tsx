@@ -6,6 +6,8 @@ import Footer from "@/components/Footer";
 import ProductPageClient from "@/components/ProductPageClient";
 import ProductReviews from "@/components/ProductReviews";
 
+export const dynamic = "force-dynamic";
+
 export default async function ProductPage() {
   let product = null;
 

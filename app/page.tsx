@@ -7,6 +7,8 @@ import Footer from "@/components/Footer";
 import { getProduct } from "@/lib/shopify";
 import { gid } from "@/lib/ids";
 
+export const dynamic = "force-dynamic";
+
 export default async function Page() {
   let product = null;
 
