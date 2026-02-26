@@ -101,7 +101,7 @@ export default function BeforeAfterSection({ items }: BeforeAfterProps) {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#4A6B8A' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#000000' }}>
             Real Results from Real Customers
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -138,7 +138,7 @@ export default function BeforeAfterSection({ items }: BeforeAfterProps) {
                 <div className="absolute top-4 left-4">
                   <span 
                     className="px-3 py-1 rounded-full text-sm font-semibold text-white"
-                    style={{ backgroundColor: '#4A6B8A' }}
+                    style={{ backgroundColor: '#000000' }}
                   >
                     Before
                   </span>
@@ -229,7 +229,7 @@ export default function BeforeAfterSection({ items }: BeforeAfterProps) {
                     : 'bg-gray-300 hover:bg-gray-400'
                 }`}
                 style={{
-                  backgroundColor: index === currentIndex ? '#4A6B8A' : undefined
+                  backgroundColor: index === currentIndex ? '#000000' : undefined
                 }}
                 aria-label={`Go to case ${index + 1}`}
               />
@@ -241,7 +241,7 @@ export default function BeforeAfterSection({ items }: BeforeAfterProps) {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             className="px-8 py-4 rounded-full font-semibold text-white hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: '#4A6B8A' }}
+            style={{ backgroundColor: '#000000' }}
             onClick={() => {
               // Fire analytics event
               if (typeof window !== 'undefined') {

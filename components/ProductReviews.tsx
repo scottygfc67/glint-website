@@ -405,7 +405,7 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
           <div className="flex items-center space-x-4 mb-4 sm:mb-0">
             <div className="flex items-center space-x-2">
               <StarRating rating={Math.round(data.average)} size="lg" />
-              <span className="text-3xl font-bold" style={{ color: '#4A6B8A' }}>
+              <span className="text-3xl font-bold" style={{ color: '#000000' }}>
                 {data.average.toFixed(1)}
               </span>
             </div>
@@ -421,7 +421,7 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
               color: '#F8FBFF'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#4A6B8A';
+              e.currentTarget.style.backgroundColor = '#000000';
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.backgroundColor = '#B8860B';
@@ -439,8 +439,8 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
                 key={index}
                 className="px-3 py-1 rounded-full text-sm font-medium border"
                 style={{ 
-                  borderColor: '#4A6B8A',
-                  color: '#4A6B8A',
+                  borderColor: '#000000',
+                  color: '#000000',
                   backgroundColor: '#F8FBFF'
                 }}
               >
@@ -461,7 +461,7 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
           <button
             onClick={() => setShowFilters(!showFilters)}
             className="sm:hidden mb-4 px-4 py-2 border rounded-lg"
-            style={{ borderColor: '#4A6B8A', color: '#4A6B8A' }}
+            style={{ borderColor: '#000000', color: '#000000' }}
           >
             Filters ({Object.values(filters).flat().length + (filters.media ? 1 : 0)})
           </button>
@@ -470,7 +470,7 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
             <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-4">
               {/* Rating filters */}
               <div>
-                <label className="block text-sm font-medium mb-2" style={{ color: '#4A6B8A' }}>
+                <label className="block text-sm font-medium mb-2" style={{ color: '#000000' }}>
                   Rating
                 </label>
                 <div className="space-y-1">
@@ -491,7 +491,7 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
 
               {/* Concerns */}
               <div>
-                <label className="block text-sm font-medium mb-2" style={{ color: '#4A6B8A' }}>
+                <label className="block text-sm font-medium mb-2" style={{ color: '#000000' }}>
                   Skin Concerns
                 </label>
                 <div className="space-y-1">
@@ -511,7 +511,7 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
 
               {/* Age Range */}
               <div>
-                <label className="block text-sm font-medium mb-2" style={{ color: '#4A6B8A' }}>
+                <label className="block text-sm font-medium mb-2" style={{ color: '#000000' }}>
                   Age Range
                 </label>
                 <div className="space-y-1">
@@ -531,7 +531,7 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
 
               {/* Other filters */}
               <div>
-                <label className="block text-sm font-medium mb-2" style={{ color: '#4A6B8A' }}>
+                <label className="block text-sm font-medium mb-2" style={{ color: '#000000' }}>
                   Other
                 </label>
                 <div className="space-y-1">
@@ -562,7 +562,7 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value)}
             className="px-4 py-2 border rounded-lg"
-            style={{ borderColor: '#4A6B8A', color: '#4A6B8A' }}
+            style={{ borderColor: '#000000', color: '#000000' }}
           >
             <option value="mostHelpful">Most Helpful</option>
             <option value="newest">Newest</option>
@@ -573,8 +573,8 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
         </div>
 
         {/* Ratings Distribution */}
-        <div className="mb-8 p-6 rounded-xl border" style={{ borderColor: '#4A6B8A' }}>
-          <h3 className="text-lg font-semibold mb-4" style={{ color: '#4A6B8A' }}>
+        <div className="mb-8 p-6 rounded-xl border" style={{ borderColor: '#000000' }}>
+          <h3 className="text-lg font-semibold mb-4" style={{ color: '#000000' }}>
             Rating Distribution
           </h3>
           <div className="space-y-2">
@@ -607,19 +607,19 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
         {/* Reviews List */}
         <div className="space-y-6">
           {filteredReviews.map((review) => (
-            <div key={review.id} className="p-6 rounded-xl border shadow-sm" style={{ borderColor: '#4A6B8A' }}>
+            <div key={review.id} className="p-6 rounded-xl border shadow-sm" style={{ borderColor: '#000000' }}>
               {/* Review Header */}
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center space-x-3">
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center text-white font-semibold"
-                    style={{ backgroundColor: '#4A6B8A' }}
+                    style={{ backgroundColor: '#000000' }}
                   >
                     {review.reviewer.name.charAt(0)}
                   </div>
                   <div>
                     <div className="flex items-center space-x-2">
-                      <span className="font-semibold" style={{ color: '#4A6B8A' }}>
+                      <span className="font-semibold" style={{ color: '#000000' }}>
                         {review.reviewer.name}
                       </span>
                       {review.verified && (
@@ -638,7 +638,7 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
               </div>
 
               {/* Review Content */}
-              <h4 className="font-semibold mb-2" style={{ color: '#4A6B8A' }}>
+              <h4 className="font-semibold mb-2" style={{ color: '#000000' }}>
                 {review.title}
               </h4>
               
@@ -666,7 +666,7 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
                       key={index}
                       className="px-2 py-1 text-xs font-medium rounded-full"
                       style={{ 
-                        backgroundColor: '#4A6B8A',
+                        backgroundColor: '#000000',
                         color: '#F8FBFF'
                       }}
                     >
@@ -703,7 +703,7 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
                   }`}
                   style={{ 
                     backgroundColor: helpfulVotes[review.id] === 'helpful' ? '#B8860B' : 'transparent',
-                    borderColor: '#4A6B8A'
+                    borderColor: '#000000'
                   }}
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -720,8 +720,8 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
                       : 'text-gray-600 hover:text-gray-800'
                   }`}
                   style={{ 
-                    backgroundColor: helpfulVotes[review.id] === 'notHelpful' ? '#4A6B8A' : 'transparent',
-                    borderColor: '#4A6B8A'
+                    backgroundColor: helpfulVotes[review.id] === 'notHelpful' ? '#000000' : 'transparent',
+                    borderColor: '#000000'
                   }}
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -733,13 +733,13 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
 
               {/* Brand Reply */}
               {review.brandReply && (
-                <div className="mt-4 p-4 rounded-lg border-l-4" style={{ borderLeftColor: '#4A6B8A', backgroundColor: '#F8FBFF' }}>
+                <div className="mt-4 p-4 rounded-lg border-l-4" style={{ borderLeftColor: '#000000', backgroundColor: '#F8FBFF' }}>
                   <div className="flex items-center space-x-2 mb-2">
                     <div className="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs font-bold"
                          style={{ backgroundColor: '#B8860B' }}>
                       G
                     </div>
-                    <span className="font-semibold" style={{ color: '#4A6B8A' }}>GLINT</span>
+                    <span className="font-semibold" style={{ color: '#000000' }}>GLINT</span>
                     <span className="text-sm text-gray-500">{timeAgo(review.brandReply.repliedAt)}</span>
                   </div>
                   <p className="text-gray-700">{review.brandReply.body}</p>
@@ -750,28 +750,28 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
         </div>
 
         {/* Trust Badges */}
-        <div className="mt-12 pt-8 border-t" style={{ borderColor: '#4A6B8A' }}>
+        <div className="mt-12 pt-8 border-t" style={{ borderColor: '#000000' }}>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
             <div>
-              <div className="text-2xl font-bold" style={{ color: '#4A6B8A' }}>
+              <div className="text-2xl font-bold" style={{ color: '#000000' }}>
                 {data.total.toLocaleString()}+
               </div>
               <div className="text-sm text-gray-600">Verified Reviews</div>
             </div>
             <div>
-              <div className="text-2xl font-bold" style={{ color: '#4A6B8A' }}>
+              <div className="text-2xl font-bold" style={{ color: '#000000' }}>
                 {data.average.toFixed(1)} ★
               </div>
               <div className="text-sm text-gray-600">Average Rating</div>
             </div>
             <div>
-              <div className="text-2xl font-bold" style={{ color: '#4A6B8A' }}>
+              <div className="text-2xl font-bold" style={{ color: '#000000' }}>
                 30-Day
               </div>
               <div className="text-sm text-gray-600">Money-Back Guarantee</div>
             </div>
             <div>
-              <div className="text-2xl font-bold" style={{ color: '#4A6B8A' }}>
+              <div className="text-2xl font-bold" style={{ color: '#000000' }}>
                 Fast UK
               </div>
               <div className="text-sm text-gray-600">Shipping</div>
@@ -783,7 +783,7 @@ export default function ProductReviews({ data = dummyData }: { data?: ReviewsPay
               href="/reviews"
               className="inline-flex items-center px-6 py-3 rounded-full font-semibold transition-colors"
               style={{ 
-                backgroundColor: '#4A6B8A',
+                backgroundColor: '#000000',
                 color: '#F8FBFF'
               }}
             >

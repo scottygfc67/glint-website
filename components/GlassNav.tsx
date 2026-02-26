@@ -89,7 +89,7 @@ export default function GlassNav() {
             <Link
               href="/api/checkout?qty=1"
               className="rounded-full px-6 py-3 text-white text-sm font-semibold transition-colors focus-visible:outline-none hover:opacity-90"
-              style={{ backgroundColor: '#4A6B8A' }}
+              style={{ backgroundColor: '#000000' }}
             >
               Buy Now
             </Link>
@@ -160,7 +160,7 @@ export default function GlassNav() {
               <Link
                 href="/api/checkout?qty=1"
                 className="block px-3 py-2 text-base font-medium text-white rounded-full mx-3 text-center hover:opacity-90"
-                style={{ backgroundColor: '#4A6B8A' }}
+                style={{ backgroundColor: '#000000' }}
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Buy Now

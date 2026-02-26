@@ -64,7 +64,7 @@ export default function AddToCart({ variantGid, title, price, currencyCode, imag
                 ? "bg-green-600 text-white"
                 : "text-white hover:opacity-90 disabled:opacity-60 disabled:cursor-not-allowed"
             }`}
-            style={!added ? { backgroundColor: '#4A6B8A' } : {}}
+            style={!added ? { backgroundColor: '#000000' } : {}}
           >
             {loading ? "Adding to Cart..." : added ? "✓ Added to Cart!" : "Add to Cart"}
           </button>

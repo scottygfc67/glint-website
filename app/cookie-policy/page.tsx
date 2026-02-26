@@ -16,7 +16,7 @@ export default function CookiePolicyPage() {
           
           {/* Introduction */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>What Are Cookies?</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>What Are Cookies?</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 Cookies are small text files that are stored on your device when you visit our website. 
@@ -33,7 +33,7 @@ export default function CookiePolicyPage() {
 
           {/* Types of Cookies */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Types of Cookies We Use</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Types of Cookies We Use</h2>
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Essential Cookies</h3>
@@ -43,15 +43,15 @@ export default function CookiePolicyPage() {
                 </p>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Session management and security</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Shopping cart functionality</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>User authentication and preferences</span>
                   </li>
                 </ul>
@@ -87,15 +87,15 @@ export default function CookiePolicyPage() {
                 </p>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Ad targeting and personalization</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Campaign performance measurement</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Social media integration</span>
                   </li>
                 </ul>
@@ -105,7 +105,7 @@ export default function CookiePolicyPage() {
 
           {/* Third-Party Cookies */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Third-Party Cookies</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Third-Party Cookies</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 We may use third-party services that set their own cookies on our website. 
@@ -115,19 +115,19 @@ export default function CookiePolicyPage() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Services We Use</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span><strong>Google Analytics:</strong> Website traffic analysis and user behavior tracking</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span><strong>Shopify:</strong> E-commerce platform and payment processing</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span><strong>Social Media:</strong> Social sharing and integration features</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span><strong>Email Marketing:</strong> Newsletter and promotional email tracking</span>
                   </li>
                 </ul>
@@ -137,7 +137,7 @@ export default function CookiePolicyPage() {
 
           {/* Managing Cookies */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Managing Your Cookie Preferences</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Managing Your Cookie Preferences</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 You have several options for managing cookies on our website:
@@ -174,15 +174,15 @@ export default function CookiePolicyPage() {
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-start">
-                      <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                      <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                       <span>Accept all cookies</span>
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                      <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                       <span>Customize your preferences</span>
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                      <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                       <span>Reject non-essential cookies</span>
                     </li>
                   </ul>
@@ -193,7 +193,7 @@ export default function CookiePolicyPage() {
 
           {/* Impact of Disabling Cookies */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Impact of Disabling Cookies</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Impact of Disabling Cookies</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 Please note that disabling certain cookies may affect your experience on our website:
@@ -201,19 +201,19 @@ export default function CookiePolicyPage() {
               <div className="bg-gray-50 rounded-lg p-6">
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Some features may not function properly</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>You may need to re-enter information more frequently</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Shopping cart may not remember your items</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Personalized content may not be available</span>
                   </li>
                 </ul>
@@ -223,7 +223,7 @@ export default function CookiePolicyPage() {
 
           {/* Updates to This Policy */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Updates to This Policy</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Updates to This Policy</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 We may update this Cookie Policy from time to time to reflect changes in our practices 
@@ -238,14 +238,14 @@ export default function CookiePolicyPage() {
 
           {/* Contact Us */}
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Contact Us</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Contact Us</h2>
             <p className="text-lg text-gray-700 mb-8">
               If you have any questions about our use of cookies, please contact us.
             </p>
             <a
               href="mailto:privacy@glint.com"
               className="inline-flex items-center px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: '#4A6B8A', color: 'white' }}
+              style={{ backgroundColor: '#000000', color: 'white' }}
             >
               Email Privacy Team
               <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

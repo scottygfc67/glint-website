@@ -51,7 +51,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium mb-6"
-               style={{ backgroundColor: '#4A6B8A', color: '#F8FBFF' }}>
+               style={{ backgroundColor: '#000000', color: '#F8FBFF' }}>
             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
@@ -114,8 +114,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div 
                   className={`flex items-center justify-between p-4 rounded-xl border-2 transition-colors cursor-pointer ${
                     selectedQuantity === 1 
-                      ? 'border-[#4A6B8A] bg-white/50' 
-                      : 'bg-white/50 border-gray-200 hover:border-[#4A6B8A]'
+                      ? 'border-[#000000] bg-white/50' 
+                      : 'bg-white/50 border-gray-200 hover:border-[#000000]'
                   }`}
                   onClick={() => setSelectedQuantity(1)}
                 >
@@ -127,7 +127,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                       checked={selectedQuantity === 1}
                       onChange={() => setSelectedQuantity(1)}
                       className="w-4 h-4"
-                      style={{ accentColor: '#4A6B8A' }} 
+                      style={{ accentColor: '#000000' }} 
                     />
                     <div>
                       <div className="font-semibold text-gray-900">Single Bottle</div>
@@ -143,8 +143,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div 
                   className={`flex items-center justify-between p-4 rounded-xl border-2 transition-colors cursor-pointer relative ${
                     selectedQuantity === 2 
-                      ? 'border-[#4A6B8A] bg-white/50' 
-                      : 'bg-white/50 border-gray-200 hover:border-[#4A6B8A]'
+                      ? 'border-[#000000] bg-white/50' 
+                      : 'bg-white/50 border-gray-200 hover:border-[#000000]'
                   }`}
                   onClick={() => setSelectedQuantity(2)}
                 >
@@ -160,7 +160,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                       checked={selectedQuantity === 2}
                       onChange={() => setSelectedQuantity(2)}
                       className="w-4 h-4"
-                      style={{ accentColor: '#4A6B8A' }} 
+                      style={{ accentColor: '#000000' }} 
                     />
                     <div>
                       <div className="font-semibold text-gray-900">2 Bottles</div>
@@ -180,8 +180,8 @@ export default function ProductCard({ product }: ProductCardProps) {
                 <div 
                   className={`flex items-center justify-between p-4 rounded-xl border-2 transition-colors cursor-pointer ${
                     selectedQuantity === 3 
-                      ? 'border-[#4A6B8A] bg-white/50' 
-                      : 'bg-white/50 border-gray-200 hover:border-[#4A6B8A]'
+                      ? 'border-[#000000] bg-white/50' 
+                      : 'bg-white/50 border-gray-200 hover:border-[#000000]'
                   }`}
                   onClick={() => setSelectedQuantity(3)}
                 >
@@ -193,7 +193,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                       checked={selectedQuantity === 3}
                       onChange={() => setSelectedQuantity(3)}
                       className="w-4 h-4"
-                      style={{ accentColor: '#4A6B8A' }} 
+                      style={{ accentColor: '#000000' }} 
                     />
                     <div>
                       <div className="font-semibold text-gray-900">3 Bottles</div>
@@ -231,7 +231,7 @@ export default function ProductCard({ product }: ProductCardProps) {
                     ? "bg-green-600 text-white"
                     : "text-white hover:opacity-90"
                 }`}
-                style={!added ? { backgroundColor: '#4A6B8A' } : {}}
+                style={!added ? { backgroundColor: '#000000' } : {}}
               >
                 {added ? "✓ Added to Cart!" : "Add to Cart"}
               </button>

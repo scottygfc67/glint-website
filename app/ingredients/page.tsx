@@ -4,7 +4,7 @@ import Link from "next/link";
 
 // === BRAND COLORS ===
 const BRAND = {
-  primary: "#4A6B8A", // GLINT blue
+  primary: "#000000", // primary black (luxury with gold)
   accent:  "#B8860B", // GLINT gold
 };
 

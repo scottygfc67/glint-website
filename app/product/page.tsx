@@ -1,4 +1,4 @@
-import { shopify } from "@/lib/shopify";
+import { getProduct } from "@/lib/shopify";
 import { gid } from "@/lib/ids";
 import AddToCart from "@/components/AddToCart";
 import QuantitySelector from "@/components/QuantitySelector";
@@ -6,53 +6,14 @@ import Footer from "@/components/Footer";
 import ProductPageClient from "@/components/ProductPageClient";
 import ProductReviews from "@/components/ProductReviews";
 
-const PRODUCT_QUERY = /* GraphQL */ `
-query Product($id: ID!) {
-  product(id: $id) {
-    title
-    description
-    featuredImage { url altText }
-    variants(first: 1) {
-      nodes { 
-        id 
-        title 
-        price { 
-          amount 
-          currencyCode 
-        }
-        compareAtPrice {
-          amount
-          currencyCode
-        }
-      }
-    }
-  }
-}`;
-
 export default async function ProductPage() {
   let product = null;
 
   try {
-  const productGid = gid.product(process.env.SHOPIFY_PRODUCT_ID!);
-  const data = await shopify<{
-    product: {
-      title: string;
-      description: string;
-      featuredImage?: { url: string; altText: string | null };
-      variants: { 
-        nodes: { 
-          id: string; 
-          title: string; 
-          price: { amount: string; currencyCode: string };
-          compareAtPrice?: { amount: string; currencyCode: string } | null;
-        }[] 
-      };
-    }
-  }>(PRODUCT_QUERY, { id: productGid });
-
-    product = data.product;
+    const productGid = gid.product(process.env.SHOPIFY_PRODUCT_ID!);
+    product = await getProduct(productGid);
   } catch (error) {
-    console.error('Failed to fetch product data:', error);
+    console.error("Failed to fetch product data:", error);
   }
 
   if (!product) {

@@ -17,7 +17,7 @@ export default function IngredientsHighlights({ items, badges = [] }: Ingredient
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#4A6B8A' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#000000' }}>
             Key Ingredients
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -32,7 +32,7 @@ export default function IngredientsHighlights({ items, badges = [] }: Ingredient
               {/* Ingredient Name */}
               <h3 
                 className="text-lg font-semibold mb-3"
-                style={{ color: '#4A6B8A' }}
+                style={{ color: '#000000' }}
               >
                 {item.name}
               </h3>
@@ -88,7 +88,7 @@ export default function IngredientsHighlights({ items, badges = [] }: Ingredient
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             className="px-8 py-4 rounded-full font-semibold text-white hover:opacity-90 transition-opacity"
-            style={{ backgroundColor: '#4A6B8A' }}
+            style={{ backgroundColor: '#000000' }}
             onClick={() => {
               // Fire analytics event
               if (typeof window !== 'undefined') {

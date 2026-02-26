@@ -16,7 +16,7 @@ export default function HowItWorksSection({ steps }: HowItWorksProps) {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#4A6B8A' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#000000' }}>
             How It Works
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -42,7 +42,7 @@ export default function HowItWorksSection({ steps }: HowItWorksProps) {
               <div className="space-y-4">
                 <h3 
                   className="text-xl font-semibold"
-                  style={{ color: '#4A6B8A' }}
+                  style={{ color: '#000000' }}
                 >
                   {step.title}
                 </h3>

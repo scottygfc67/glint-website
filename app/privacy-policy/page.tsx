@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
           
           {/* Introduction */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Introduction</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Introduction</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 At GLINT, we are committed to protecting your privacy and ensuring the security of your personal information. 
@@ -32,7 +32,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Information We Collect */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Information We Collect</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Information We Collect</h2>
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Personal Information</h3>
@@ -41,19 +41,19 @@ export default function PrivacyPolicyPage() {
                 </p>
                 <ul className="space-y-2 text-gray-700">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Register for an account or make a purchase</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Subscribe to our newsletter or marketing communications</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Contact us with questions or feedback</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Participate in surveys or promotions</span>
                   </li>
                 </ul>
@@ -96,34 +96,34 @@ export default function PrivacyPolicyPage() {
 
           {/* How We Use Your Information */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>How We Use Your Information</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>How We Use Your Information</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 We use the information we collect for various purposes, including:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Processing and fulfilling your orders</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Providing customer support and responding to inquiries</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Sending you marketing communications (with your consent)</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Improving our website and services</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Preventing fraud and ensuring security</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Complying with legal obligations</span>
                 </li>
               </ul>
@@ -132,7 +132,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Information Sharing */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Information Sharing</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Information Sharing</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:
@@ -160,7 +160,7 @@ export default function PrivacyPolicyPage() {
 
           {/* Data Security */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Data Security</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Data Security</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 We implement appropriate technical and organizational security measures to protect your personal information 
@@ -176,34 +176,34 @@ export default function PrivacyPolicyPage() {
 
           {/* Your Rights */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Your Rights</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Your Rights</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 Depending on your location, you may have certain rights regarding your personal information:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Right to access your personal information</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Right to correct inaccurate information</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Right to delete your personal information</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Right to restrict processing of your information</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Right to data portability</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Right to object to processing</span>
                 </li>
               </ul>
@@ -212,14 +212,14 @@ export default function PrivacyPolicyPage() {
 
           {/* Contact Us */}
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Contact Us</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Contact Us</h2>
             <p className="text-lg text-gray-700 mb-8">
               If you have any questions about this Privacy Policy or our data practices, please contact us.
             </p>
             <a
               href="mailto:privacy@glint.com"
               className="inline-flex items-center px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: '#4A6B8A', color: 'white' }}
+              style={{ backgroundColor: '#000000', color: 'white' }}
             >
               Email Privacy Team
               <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -15,12 +15,12 @@ export default function ShippingPage() {
           
           {/* Shipping Options */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-12" style={{ color: '#4A6B8A' }}>Shipping Options</h2>
+            <h2 className="text-3xl font-bold mb-12" style={{ color: '#000000' }}>Shipping Options</h2>
             
             <div className="overflow-hidden">
               <table className="w-full">
                 <thead>
-                  <tr className="border-b-2" style={{ borderColor: '#4A6B8A' }}>
+                  <tr className="border-b-2" style={{ borderColor: '#000000' }}>
                     <th className="text-left py-4 px-2 font-semibold text-gray-900">Service</th>
                     <th className="text-left py-4 px-2 font-semibold text-gray-900">Delivery Time</th>
                     <th className="text-left py-4 px-2 font-semibold text-gray-900">Service Type</th>
@@ -35,7 +35,7 @@ export default function ShippingPage() {
                     <td className="py-4 px-2 text-gray-600">Next working day</td>
                     <td className="py-4 px-2 text-gray-500 text-sm">Royal Mail Special Delivery</td>
                     <td className="py-4 px-2 text-right">
-                      <span className="text-xl font-bold" style={{ color: '#4A6B8A' }}>£5.99</span>
+                      <span className="text-xl font-bold" style={{ color: '#000000' }}>£5.99</span>
                     </td>
                   </tr>
                   
@@ -46,7 +46,7 @@ export default function ShippingPage() {
                     <td className="py-4 px-2 text-gray-600">2-3 working days</td>
                     <td className="py-4 px-2 text-gray-500 text-sm">Royal Mail Tracked</td>
                     <td className="py-4 px-2 text-right">
-                      <span className="text-xl font-bold" style={{ color: '#4A6B8A' }}>£3.99</span>
+                      <span className="text-xl font-bold" style={{ color: '#000000' }}>£3.99</span>
                     </td>
                   </tr>
                   
@@ -57,7 +57,7 @@ export default function ShippingPage() {
                     <td className="py-4 px-2 text-gray-600">3-7 business days</td>
                     <td className="py-4 px-2 text-gray-500 text-sm">Express International</td>
                     <td className="py-4 px-2 text-right">
-                      <span className="text-xl font-bold" style={{ color: '#4A6B8A' }}>£5.99</span>
+                      <span className="text-xl font-bold" style={{ color: '#000000' }}>£5.99</span>
                     </td>
                   </tr>
                   
@@ -68,7 +68,7 @@ export default function ShippingPage() {
                     <td className="py-4 px-2 text-gray-600">3-7 business days</td>
                     <td className="py-4 px-2 text-gray-500 text-sm">Express International</td>
                     <td className="py-4 px-2 text-right">
-                      <span className="text-xl font-bold" style={{ color: '#4A6B8A' }}>£9.99</span>
+                      <span className="text-xl font-bold" style={{ color: '#000000' }}>£9.99</span>
                     </td>
                   </tr>
                 </tbody>
@@ -77,7 +77,7 @@ export default function ShippingPage() {
           </div>
 
           {/* Special Offer */}
-          <div className="p-8 mb-16 rounded-lg" style={{ backgroundColor: '#4A6B8A', color: 'white' }}>
+          <div className="p-8 mb-16 rounded-lg" style={{ backgroundColor: '#000000', color: 'white' }}>
             <h3 className="text-2xl font-bold mb-4">Special Offer</h3>
             <p className="text-xl">
               Get <strong>2 serums for £29.99</strong> + <strong>FREE worldwide shipping</strong>
@@ -87,11 +87,11 @@ export default function ShippingPage() {
 
           {/* Delivery Information */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-12" style={{ color: '#4A6B8A' }}>Delivery Information</h2>
+            <h2 className="text-3xl font-bold mb-12" style={{ color: '#000000' }}>Delivery Information</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-xl font-semibold mb-6" style={{ color: '#4A6B8A' }}>Processing Times</h3>
+                <h3 className="text-xl font-semibold mb-6" style={{ color: '#000000' }}>Processing Times</h3>
                 <p className="text-gray-700 mb-4 leading-relaxed">
                   Orders are processed within 24 hours of being placed. We dispatch Monday to Friday.
                 </p>
@@ -101,7 +101,7 @@ export default function ShippingPage() {
               </div>
               
               <div>
-                <h3 className="text-xl font-semibold mb-6" style={{ color: '#4A6B8A' }}>Tracking</h3>
+                <h3 className="text-xl font-semibold mb-6" style={{ color: '#000000' }}>Tracking</h3>
                 <p className="text-gray-700 mb-6 leading-relaxed">
                   You'll receive a tracking number via email once your order is dispatched.
                 </p>
@@ -122,15 +122,15 @@ export default function ShippingPage() {
           </div>
 
           {/* Contact */}
-          <div className="border-t pt-12" style={{ borderColor: '#4A6B8A' }}>
-            <h2 className="text-3xl font-bold mb-6" style={{ color: '#4A6B8A' }}>Need Help?</h2>
+          <div className="border-t pt-12" style={{ borderColor: '#000000' }}>
+            <h2 className="text-3xl font-bold mb-6" style={{ color: '#000000' }}>Need Help?</h2>
             <p className="text-gray-700 mb-8 text-lg">
               Questions about shipping? Contact our customer service team.
             </p>
             <a
               href="/contact"
               className="inline-block px-8 py-4 rounded-lg text-white font-semibold hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: '#4A6B8A' }}
+              style={{ backgroundColor: '#000000' }}
             >
               Contact Support
             </a>

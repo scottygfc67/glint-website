@@ -30,8 +30,8 @@ export default function QuantitySelector({ onQuantityChange }: QuantitySelectorP
         <div 
           className={`flex items-center justify-between p-4 rounded-xl border-2 transition-colors cursor-pointer ${
             selectedQuantity === 1 
-              ? 'bg-blue-50 border-blue-400' 
-              : 'bg-white/50 border-gray-200 hover:border-blue-400'
+              ? 'bg-gray-100 border-black' 
+              : 'bg-white/50 border-gray-200 hover:border-black'
           }`}
           onClick={() => handleQuantityChange(1)}
         >
@@ -42,7 +42,8 @@ export default function QuantitySelector({ onQuantityChange }: QuantitySelectorP
               value="1" 
               checked={selectedQuantity === 1}
               onChange={() => handleQuantityChange(1)}
-              className="w-4 h-4 text-blue-600" 
+              className="w-4 h-4"
+              style={{ accentColor: '#000000' }}
             />
             <div>
               <div className="font-semibold text-gray-900">Single Bottle</div>
@@ -58,12 +59,12 @@ export default function QuantitySelector({ onQuantityChange }: QuantitySelectorP
         <div 
           className={`flex items-center justify-between p-4 rounded-xl border-2 transition-colors cursor-pointer relative ${
             selectedQuantity === 2 
-              ? 'bg-blue-50 border-blue-400' 
-              : 'bg-white/50 border-gray-200 hover:border-blue-400'
+              ? 'bg-gray-100 border-black' 
+              : 'bg-white/50 border-gray-200 hover:border-black'
           }`}
           onClick={() => handleQuantityChange(2)}
         >
-          <div className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+          <div className="absolute -top-2 -right-2 bg-black text-white text-xs font-bold px-2 py-1 rounded-full">
             BEST VALUE
           </div>
           <div className="flex items-center space-x-3">
@@ -73,7 +74,8 @@ export default function QuantitySelector({ onQuantityChange }: QuantitySelectorP
               value="2" 
               checked={selectedQuantity === 2}
               onChange={() => handleQuantityChange(2)}
-              className="w-4 h-4 text-blue-600" 
+              className="w-4 h-4"
+              style={{ accentColor: '#000000' }}
             />
             <div>
               <div className="font-semibold text-gray-900">2 Bottles</div>
@@ -93,8 +95,8 @@ export default function QuantitySelector({ onQuantityChange }: QuantitySelectorP
         <div 
           className={`flex items-center justify-between p-4 rounded-xl border-2 transition-colors cursor-pointer ${
             selectedQuantity === 3 
-              ? 'bg-blue-50 border-blue-400' 
-              : 'bg-white/50 border-gray-200 hover:border-blue-400'
+              ? 'bg-gray-100 border-black' 
+              : 'bg-white/50 border-gray-200 hover:border-black'
           }`}
           onClick={() => handleQuantityChange(3)}
         >
@@ -105,7 +107,8 @@ export default function QuantitySelector({ onQuantityChange }: QuantitySelectorP
               value="3" 
               checked={selectedQuantity === 3}
               onChange={() => handleQuantityChange(3)}
-              className="w-4 h-4 text-blue-600" 
+              className="w-4 h-4"
+              style={{ accentColor: '#000000' }}
             />
             <div>
               <div className="font-semibold text-gray-900">3 Bottles</div>

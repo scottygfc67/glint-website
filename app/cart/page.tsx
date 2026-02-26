@@ -33,7 +33,7 @@ export default function CartPage() {
                 <Link 
                   href="/product"
                   className="inline-flex items-center text-white px-8 py-4 rounded-full font-semibold text-lg hover:opacity-90 transition-colors"
-                  style={{ backgroundColor: '#4A6B8A' }}
+                  style={{ backgroundColor: '#000000' }}
                 >
                   Continue Shopping
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -117,7 +117,7 @@ export default function CartPage() {
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
                           className="w-10 h-10 rounded-full border flex items-center justify-center hover:opacity-90 transition-colors"
-                          style={{ backgroundColor: '#4A6B8A', borderColor: '#4A6B8A' }}
+                          style={{ backgroundColor: '#000000', borderColor: '#000000' }}
                         >
                           <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
@@ -127,7 +127,7 @@ export default function CartPage() {
                         <button
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
                           className="w-10 h-10 rounded-full border flex items-center justify-center hover:opacity-90 transition-colors"
-                          style={{ backgroundColor: '#4A6B8A', borderColor: '#4A6B8A' }}
+                          style={{ backgroundColor: '#000000', borderColor: '#000000' }}
                         >
                           <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
@@ -276,7 +276,7 @@ export default function CartPage() {
                         }
                       }}
                       className="w-full text-white px-4 lg:px-6 py-3 lg:py-4 rounded-full font-semibold text-base lg:text-lg hover:opacity-90 transition-colors text-center"
-                      style={{ backgroundColor: '#4A6B8A' }}
+                      style={{ backgroundColor: '#000000' }}
                     >
                       Proceed to Checkout
                     </button>

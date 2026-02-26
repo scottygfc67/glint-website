@@ -16,7 +16,7 @@ export default function TermsOfServicePage() {
           
           {/* Introduction */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Agreement to Terms</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Agreement to Terms</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 These Terms of Service ("Terms") govern your use of the GLINT website and services. 
@@ -32,30 +32,30 @@ export default function TermsOfServicePage() {
 
           {/* Use of Website */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Use of Website</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Use of Website</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 You may use our website for lawful purposes only. You agree not to:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Use the website in any way that violates applicable laws or regulations</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Transmit any harmful, threatening, or offensive content</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Attempt to gain unauthorized access to our systems or networks</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Interfere with the proper functioning of the website</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                  <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                   <span>Use automated systems to access the website without permission</span>
                 </li>
               </ul>
@@ -64,7 +64,7 @@ export default function TermsOfServicePage() {
 
           {/* Products and Services */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Products and Services</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Products and Services</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 We offer GLINT Eye Glow Serum and related products through our website. 
@@ -92,7 +92,7 @@ export default function TermsOfServicePage() {
 
           {/* Orders and Payment */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Orders and Payment</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Orders and Payment</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 When you place an order, you agree to provide accurate and complete information. 
@@ -103,15 +103,15 @@ export default function TermsOfServicePage() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-3">Payment Terms</h3>
                   <ul className="space-y-2">
                     <li className="flex items-start">
-                      <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                      <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                       <span>Payment is required at the time of order placement</span>
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                      <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                       <span>We accept major credit cards and other payment methods as displayed</span>
                     </li>
                     <li className="flex items-start">
-                      <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                      <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                       <span>All prices are in GBP unless otherwise specified</span>
                     </li>
                   </ul>
@@ -139,7 +139,7 @@ export default function TermsOfServicePage() {
 
           {/* Returns and Refunds */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Returns and Refunds</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Returns and Refunds</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 Our return and refund policy is detailed in our separate Returns Policy. 
@@ -149,15 +149,15 @@ export default function TermsOfServicePage() {
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Key Points</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>30-day return window from delivery date</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Items must be unused and in original packaging</span>
                   </li>
                   <li className="flex items-start">
-                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                    <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                     <span>Refunds processed within 5-7 business days</span>
                   </li>
                 </ul>
@@ -167,7 +167,7 @@ export default function TermsOfServicePage() {
 
           {/* Intellectual Property */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Intellectual Property</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Intellectual Property</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 All content on this website, including text, graphics, logos, images, and software, 
@@ -183,7 +183,7 @@ export default function TermsOfServicePage() {
 
           {/* Limitation of Liability */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Limitation of Liability</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Limitation of Liability</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 To the maximum extent permitted by law, GLINT shall not be liable for any indirect, 
@@ -199,7 +199,7 @@ export default function TermsOfServicePage() {
 
           {/* Governing Law */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Governing Law</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Governing Law</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 These Terms shall be governed by and construed in accordance with the laws of England and Wales. 
@@ -211,14 +211,14 @@ export default function TermsOfServicePage() {
 
           {/* Contact Us */}
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Contact Us</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Contact Us</h2>
             <p className="text-lg text-gray-700 mb-8">
               If you have any questions about these Terms of Service, please contact us.
             </p>
             <a
               href="mailto:legal@glint.com"
               className="inline-flex items-center px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: '#4A6B8A', color: 'white' }}
+              style={{ backgroundColor: '#000000', color: 'white' }}
             >
               Email Legal Team
               <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

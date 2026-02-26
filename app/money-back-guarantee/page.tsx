@@ -15,10 +15,10 @@ export default function MoneyBackGuaranteePage() {
           
           {/* How It Works */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-12" style={{ color: '#4A6B8A' }}>How Our Guarantee Works</h2>
+            <h2 className="text-3xl font-bold mb-12" style={{ color: '#000000' }}>How Our Guarantee Works</h2>
             <div className="space-y-8">
               <div className="flex items-start">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center mr-6 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}>
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mr-6 flex-shrink-0" style={{ backgroundColor: '#000000' }}>
                   <span className="text-xl font-bold text-white">1</span>
                 </div>
                 <div>
@@ -36,7 +36,7 @@ export default function MoneyBackGuaranteePage() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center mr-6 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}>
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mr-6 flex-shrink-0" style={{ backgroundColor: '#000000' }}>
                   <span className="text-xl font-bold text-white">3</span>
                 </div>
                 <div>
@@ -51,30 +51,30 @@ export default function MoneyBackGuaranteePage() {
 
           {/* Terms & Conditions */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-12" style={{ color: '#4A6B8A' }}>Terms & Conditions</h2>
+            <h2 className="text-3xl font-bold mb-12" style={{ color: '#000000' }}>Terms & Conditions</h2>
             <div className="space-y-4 text-gray-700">
               <div className="flex items-start">
-                <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                 <p>Guarantee is valid for 30 days from the date of delivery</p>
               </div>
               <div className="flex items-start">
-                <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                 <p>Product must be used consistently for at least 14 days before requesting a refund</p>
               </div>
               <div className="flex items-start">
-                <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                 <p>Before and after photos are required - clear, well-lit photos of your under-eye area with both eyes visible</p>
               </div>
               <div className="flex items-start">
-                <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                 <p>After photos should be taken after 14-30 days of use with the same lighting and angle as before photos</p>
               </div>
               <div className="flex items-start">
-                <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                 <p>Refund will be processed within 5-7 business days of photo approval</p>
               </div>
               <div className="flex items-start">
-                <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}></div>
+                <div className="w-2 h-2 rounded-full mt-2 mr-4 flex-shrink-0" style={{ backgroundColor: '#000000' }}></div>
                 <p>One guarantee per customer per product</p>
               </div>
             </div>
@@ -88,7 +88,7 @@ export default function MoneyBackGuaranteePage() {
             <a
               href="mailto:guarantee@glint.com"
               className="inline-flex items-center px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: '#4A6B8A', color: 'white' }}
+              style={{ backgroundColor: '#000000', color: 'white' }}
             >
               Email guarantee@glint.com
               <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -98,7 +98,7 @@ export default function MoneyBackGuaranteePage() {
           </div>
 
           {/* CTA */}
-          <div className="p-12 text-center rounded-lg" style={{ backgroundColor: '#4A6B8A', color: 'white' }}>
+          <div className="p-12 text-center rounded-lg" style={{ backgroundColor: '#000000', color: 'white' }}>
             <h2 className="text-3xl font-bold mb-6">Ready to Try GLINT Risk-Free?</h2>
             <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">Join thousands of satisfied customers with our 30-day guarantee</p>
             <a

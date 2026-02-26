@@ -135,7 +135,7 @@ export default function ProductInfo({}: ProductInfoProps) {
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#4A6B8A' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#000000' }}>
             Product Information
           </h2>
           <p className="text-lg text-gray-600">
@@ -152,14 +152,14 @@ export default function ProductInfo({}: ProductInfoProps) {
               <div key={id} className="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
                 <button
                   className="w-full px-6 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2"
-                  style={{ '--tw-ring-color': '#4A6B8A' } as React.CSSProperties}
+                  style={{ '--tw-ring-color': '#000000' } as React.CSSProperties}
                   onClick={() => toggleSection(id)}
                   aria-expanded={isOpen}
                   aria-controls={`content-${id}`}
                 >
                   <h3 
                     className="text-lg font-semibold"
-                    style={{ color: '#4A6B8A' }}
+                    style={{ color: '#000000' }}
                   >
                     {data.title}
                   </h3>

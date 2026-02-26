@@ -15,7 +15,7 @@ export default function ReturnsPage() {
           
           {/* Return Policy */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-12" style={{ color: '#4A6B8A' }}>Return Policy</h2>
+            <h2 className="text-3xl font-bold mb-12" style={{ color: '#000000' }}>Return Policy</h2>
             <div className="space-y-6 text-gray-700">
               <p className="text-lg">
                 We offer hassle-free returns within 30 days of delivery. Items must be unused and in original packaging. 
@@ -30,10 +30,10 @@ export default function ReturnsPage() {
 
           {/* How to Return */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-12" style={{ color: '#4A6B8A' }}>How to Return an Item</h2>
+            <h2 className="text-3xl font-bold mb-12" style={{ color: '#000000' }}>How to Return an Item</h2>
             <div className="space-y-8">
               <div className="flex items-start">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center mr-6 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}>
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mr-6 flex-shrink-0" style={{ backgroundColor: '#000000' }}>
                   <span className="text-xl font-bold text-white">1</span>
                 </div>
                 <div>
@@ -51,7 +51,7 @@ export default function ReturnsPage() {
                 </div>
               </div>
               <div className="flex items-start">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center mr-6 flex-shrink-0" style={{ backgroundColor: '#4A6B8A' }}>
+                <div className="w-12 h-12 rounded-full flex items-center justify-center mr-6 flex-shrink-0" style={{ backgroundColor: '#000000' }}>
                   <span className="text-xl font-bold text-white">3</span>
                 </div>
                 <div>
@@ -73,7 +73,7 @@ export default function ReturnsPage() {
 
           {/* Return Conditions */}
           <div className="mb-16">
-            <h2 className="text-3xl font-bold mb-12" style={{ color: '#4A6B8A' }}>Return Conditions</h2>
+            <h2 className="text-3xl font-bold mb-12" style={{ color: '#000000' }}>Return Conditions</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
@@ -107,14 +107,14 @@ export default function ReturnsPage() {
 
           {/* Contact */}
           <div className="text-center">
-            <h2 className="text-3xl font-bold mb-8" style={{ color: '#4A6B8A' }}>Need Help?</h2>
+            <h2 className="text-3xl font-bold mb-8" style={{ color: '#000000' }}>Need Help?</h2>
             <p className="text-lg text-gray-700 mb-8">
               Questions about returns? Contact our support team.
             </p>
             <a
               href="mailto:returns@glint.com"
               className="inline-flex items-center px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity"
-              style={{ backgroundColor: '#4A6B8A', color: 'white' }}
+              style={{ backgroundColor: '#000000', color: 'white' }}
             >
               Email Returns Support
               <svg className="w-5 h-5 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
