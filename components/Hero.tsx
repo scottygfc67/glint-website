@@ -21,8 +21,15 @@ export default function Hero({ product }: HeroProps) {
         <img 
           src="/hero.png" 
           alt="GLINT Eye Glow Serum" 
-          className="w-full h-full object-cover object-center"
+          className="hero-image w-full h-full object-cover object-center"
         />
+        <style jsx>{`
+          @media (max-width: 767px) {
+            .hero-image {
+              object-position: calc(50% - 200px) 50%;
+            }
+          }
+        `}</style>
       </div>
     </section>
   );
